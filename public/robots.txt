@@ -1,7 +1,0 @@
-# hexo robots.txt
-User-agent: *
-Allow: /
-Allow: /archives/
-
-Sitemap: https://www.arsrna.ltd/sitemap.xml
-Sitemap: https://www.arsrna.ltd/baidusitemap.xml
