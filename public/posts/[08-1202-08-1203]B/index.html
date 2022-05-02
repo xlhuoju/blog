@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">JavaServerless Learn-基础 | Ar-Sr-Na 博客站</title>
+  
+    <link rel="shortcut icon" href="/icon2.jpg">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.css">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "Ar-Sr-Na博客站";
+  mashiro_option.author_name = "博客站";
+  mashiro_option.site_url = "https://www.arsrna.ltd";
+  mashiro_option.v_appId = "bYBEppifUgTsjjChokFXJefz-gzGzoHsz";
+  mashiro_option.v_appKey = "2eq935REyPu1yFkOS5UzRHNJ";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://www.arsrna.cn/hdpic.jpg".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+</head>
+</html>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop filter-dim">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="https://www.arsrna.ltd">
+          <img src="https://res.arsrna.cn/icon2.jpg">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>女装只有cos90°次和tan90°次</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="https://github.com/ArSrNa" target="_blank" class="social-github" title="github">
+                    <img src="https://res.arsrna.cn/slsblog/github.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://www.zhihu.com/people/arsrna-87" target="_blank" class="social-github" title="zhihu">
+                    <img src="https://res.arsrna.cn/slsblog/zhihu.png">
+                  </a>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">Ar-Sr-Na</span>
+            <span class="shironeko">博客站</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="https://www.arsrna.cn/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    回到主站
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人帐
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/atom.xml">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+                    RSS
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="https://www.arsrna.cn/policy/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    政策
+                  </span>
+                </a>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://arsrnasite.cn-gd.ufileos.com/javalearn%2Fjavalhdpic.jpg);" src="/slsblog/orange.progress-bar-stripe-loader.svg" data-src="https://arsrnasite.cn-gd.ufileos.com/javalearn%2Fjavalhdpic.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      JavaServerless Learn-基础</h1>
+      <p class="entry-census">
+        <span>
+          <a href="www.arsrna.cn">
+            <img src="https://res.arsrna.cn/icon2.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="www.arsrna.cn">Ar-Sr-Na</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2021-2-2<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content">-->
+        	<!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <p>节目编号：[08-1202/08-1203]A 关于QQ群内“被踢出本群” XML卡片深入研究</p>
+<h1 id="Ar-Sr-Na-Java-Serverless-Learn项目-基础"><a href="#Ar-Sr-Na-Java-Serverless-Learn项目-基础" class="headerlink" title="Ar-Sr-Na Java Serverless Learn项目-基础"></a>Ar-Sr-Na Java Serverless Learn项目-基础</h1><p>节目编号：[08-1202/08-1203]B：Ar-Sr-Na Java Serverless Learn项目-基础</p>
+<h2 id="教程介绍"><a href="#教程介绍" class="headerlink" title="教程介绍"></a>教程介绍</h2><p>本教程面向Serverless开发，不针对本地开发，意味着需要有较好Java基础，英语基础，熟悉逻辑关系，了解Serverless架构。</p>
+<h2 id="教程初衷"><a href="#教程初衷" class="headerlink" title="教程初衷"></a>教程初衷</h2><p>在这个云计算盛行也是趋势的时代，本地函数带来的成本问题不占少数，尤其是当应用上线时，大量请求压榨服务器导致宕机，采购高性能服务器成本太高，所以Serverless出现了，效率更高，成本更低，扩展性，计算资源等层面具有众多优势，所以，它不香么？</p>
+<p>创业路上并不是一帆风顺，我们也希望能帮助大家实现梦想，努力总比站在原地更接近成功！</p>
+<h1 id="Serverless介绍"><a href="#Serverless介绍" class="headerlink" title="Serverless介绍"></a>Serverless介绍</h1><p>Serverless Computing，一种全新的函数架构，意味着无服务器，节省资源，也降低了成本。Serverless被称为FaaS（Function-as-a-Service），以平台即服务（PaaS）为基础，意味着需要一个平台来支撑函数服务。</p>
+<p>本站建议使用腾讯云Serverless云函数服务<a href="https://console.cloud.tencent.com/scf/" target="_blank" rel="noopener">https://console.cloud.tencent.com/scf/</a></p>
+<h1 id="Java语言简介"><a href="#Java语言简介" class="headerlink" title="Java语言简介"></a>Java语言简介</h1><p>java是计算机编程语言，不仅吸收了C++语言的各种优点，还摒弃了C++里难以理解的多继承、指针等概念，因此Java语言具有功能强大和简单易用两个特征。Java语言作为静态面向对象编程语言的代表，极好地实现了面向对象理论，允许程序员以优雅的思维方式进行复杂的编程。</p>
+<p>Java功能强大，扩展性高，虽说在Java领域，专业的东西很多，未必一下子能理解完，</p>
+<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p>无论是张浩扬的QQ程序，up主的数据可视化，都以java为后端程序，当然<a href="https://github.com/ArSrNa/bilibiliData-TCV" target="_blank" rel="noopener">bilibili数据可视化</a>这个是PHP的</p>
+<h3 id="项目在不断完善中，希望大家多多支持：QQ群：1097347557"><a href="#项目在不断完善中，希望大家多多支持：QQ群：1097347557" class="headerlink" title="项目在不断完善中，希望大家多多支持：QQ群：1097347557"></a>项目在不断完善中，希望大家多多支持：QQ群：1097347557</h3><h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><h2 id="云端准备"><a href="#云端准备" class="headerlink" title="云端准备"></a>云端准备</h2><p>腾讯云账户</p>
+<p>腾讯云秘钥ID与Key（必须放行组件的权限）</p>
+<h2 id="本地机的准备"><a href="#本地机的准备" class="headerlink" title="本地机的准备"></a>本地机的准备</h2><p>NPM：<a href="https://www.npmjs.com/get-npm" target="_blank" rel="noopener">npm | get npm (npmjs.com) </a>（这里就不放出教程了）</p>
+<p>Serverless CLI：npm install -g serverless</p>
+<p>教程：<a href="https://www.serverless.com/cn/framework/docs/quickstart/installation" target="_blank" rel="noopener">下载安装 (serverless.com)</a></p>
+<h1 id="开始第一个无服务器程序"><a href="#开始第一个无服务器程序" class="headerlink" title="开始第一个无服务器程序"></a>开始第一个无服务器程序</h1><h2 id="云端配置函数"><a href="#云端配置函数" class="headerlink" title="云端配置函数"></a>云端配置函数</h2><p>打开腾讯云的<a href="https://console.cloud.tencent.com/scf/" target="_blank" rel="noopener">云函数控制台</a></p>
+<p><img src="https://res.arsrna.cn/gg4ureyez9.png" alt><br>点击函数服务</p>
+<p><img src="https://res.arsrna.cn/93gzdy3koa.png" alt><br>新建一个函数</p>
+<p><img src="https://res.arsrna.cn/wi8vcnc8es.png" alt><br>输入名称，语言选择Java，点击下一步</p>
+<p><img src="https://res.arsrna.cn/f3xxq8ogro.png" alt><br><img src="https://res.arsrna.cn/agmh0ztnjg.png" alt><br>要注意此处的执行方法，它定义了调用云函数时需要从哪个文件中的哪个函数开始执行。</p>
+<p>如上图是example.Hello::mainHandler</p>
+<p>所以函数就得这么设置，从mainHandler开始执行：</p>
+<pre><code class="java">public String mainHandler(KeyValueClass kv)
+    {
+       return String.format(&quot;Hello World&quot;);
+    }
+</code></pre>
+<p>创建完成后，需要上传函数</p>
+<p><img src="https://res.arsrna.cn/yyy8ijr3a8.png" alt><br>需要把源代码改为index.java，然后打包为zip上传，就完成了</p>
+<h2 id="本地配置函数"><a href="#本地配置函数" class="headerlink" title="本地配置函数"></a>本地配置函数</h2><p>如果想要本地调试再部署到云端更方便些，可以使用Serverless.yml和.env文件</p>
+<p>它类似这样：</p>
+<pre><code class="yaml">component: website
+name: website
+org: test # (可选) 用于记录组织信息，默认值为您的腾讯云账户 APPID
+app: JavaLearn # (可选) 该 website 应用名称
+stage: dev # (可选) 用于区分环境信息，默认值是 dev
+</code></pre>
+<p>他声明了用到的组件，需要的云产品，以及环境，各种方便辨认的信息</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">名称</th>
+<th style="text-align:left">必要性</th>
+<th style="text-align:left">释义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">component</td>
+<td style="text-align:left">√</td>
+<td style="text-align:left">引用组件名称</td>
+</tr>
+<tr>
+<td style="text-align:left">name</td>
+<td style="text-align:left">√</td>
+<td style="text-align:left">组件实例名称</td>
+</tr>
+<tr>
+<td style="text-align:left">org</td>
+<td style="text-align:left">可选</td>
+<td style="text-align:left">组织信息（默认是你腾讯云APPID）</td>
+</tr>
+<tr>
+<td style="text-align:left">app</td>
+<td style="text-align:left">可选</td>
+<td style="text-align:left">改xxx组件的应用名称</td>
+</tr>
+<tr>
+<td style="text-align:left">stage</td>
+<td style="text-align:left">可选</td>
+<td style="text-align:left">开发环境，用于区分</td>
+</tr>
+</tbody>
+</table>
+<p>例如我要创建一个网站组件，需要一个产品来存储我的网站资源，毕竟这是Serverless，不可能引用Server服务器组件，所以能存储网站并且部署网站的只有云开发和COS，云开发的能力过于广泛，集成了各种生态资源，所以建议使用COS对象存储的静态网站托管</p>
+<p>此时只需要在yml中加上：</p>
+<pre><code class="yaml">inputs:
+  bucket: my-bucket
+  region: ap-guangzhou
+
+</code></pre>
+<p>其中：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">名称</th>
+<th style="text-align:left">释义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">bucket</td>
+<td style="text-align:left">存储桶的名称</td>
+</tr>
+<tr>
+<td style="text-align:left">region</td>
+<td style="text-align:left">存储桶地域</td>
+</tr>
+</tbody>
+</table>
+<p>最终输出地址就为bucket-appID.cos-website.region.myqcloud.com（部署后生效）</p>
+<p>在该目录下打开命令行，输入serverless deploy，登录后即可部署完成</p>
+<p>如果还需要部署其它的配置，例如https等，可以参照以下实例</p>
+<pre><code class="yaml">inputs:
+  src:
+    src: ./
+    index: index.html
+    # dist: ./dist
+    # hook: npm run build
+    # websitePath: ./
+  region: ap-hongkong
+  bucketName: javalearn
+  protocol: http
+</code></pre>
+<p>定义上传的子目录：src<br>定义主页：index<br>访问协议：protocol</p>
+<p>如果不想每次登录，可以新建.env文件，输入你的腾讯云秘钥</p>
+<pre><code class="yaml">TENCENT_SECRET_ID=xxxxxxxxxx
+TENCENT_SECRET_KEY=xxxxxxx
+</code></pre>
+<p><strong>注：腾讯云对的秘钥有关账户和资产安全，不要轻易透露，Deploy的时候会自动忽略.env文件不上传，但是github不一样！切记请不要透露个人的ID和KEY</strong></p>
+<h2 id="部署函数"><a href="#部署函数" class="headerlink" title="部署函数"></a>部署函数</h2><p>在有Serverless.yml的目录下打开命令行</p>
+<p>键入<strong>serverless deploy</strong>或<strong>sls deploy</strong>（注，Powershell中不能使用sls）</p>
+<p>访问输出的地址，就部署完毕了</p>
+<h1 id="ServerlessのApplication"><a href="#ServerlessのApplication" class="headerlink" title="ServerlessのApplication"></a>ServerlessのApplication</h1><h2 id="OCR文字识别"><a href="#OCR文字识别" class="headerlink" title="OCR文字识别"></a>OCR文字识别</h2><h2 id="全栈Web部署"><a href="#全栈Web部署" class="headerlink" title="全栈Web部署"></a>全栈Web部署</h2><p>Ar-Sr-Na的个人网站主要语言为Html，其次是PHP，JavaScript</p>
+<h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><h2 id="文档更新"><a href="#文档更新" class="headerlink" title="文档更新"></a>文档更新</h2><p>2020-5-3 项目开始</p>
+<p>2020-5-4 Ar-Sr-Na加入计划</p>
+<p>2020-6-10 java.arsrna.cn建成</p>
+<p>2020-6-18 文章发布</p>
+<p>2021-1-1 ServerlessSSL生效</p>
+<p>2021-2-1 文章更新</p>
+<p>2021-2-2 内容优化，结构更新，新增章节：准备；开始第一个无服务器程序</p>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://res.arsrna.cnnull"></li>
+                <li class="wechat-code"><img src="https://res.arsrna.cnnull"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/posts/[08-1202-08-1203]D/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="/slsblog/orange.progress-bar-stripe-loader.svg" data-src="https://res.arsrna.cn/def.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://res.arsrna.cn/def.jpg">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                春节期间部分服务SLA公告：[08-1202/08-1203]D</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/posts/[08-1202-08-1203]A/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="/slsblog/orange.progress-bar-stripe-loader.svg" data-src="https://res.arsrna.cn/blogs/xmlCard/main.JPG" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://res.arsrna.cn/blogs/xmlCard/main.JPG">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                关于QQ群内“被踢出本群” XML卡片深入研究</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "bYBEppifUgTsjjChokFXJefz-gzGzoHsz",
+        appKey: "2eq935REyPu1yFkOS5UzRHNJ",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="www.arsrna.cn" class="profile gravatar"><img src="https://res.arsrna.cn/icon2.jpg" itemprop="image" alt="Ar-Sr-Na" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="www.arsrna.cn" itemprop="url" rel="author">Ar-Sr-Na</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>微博Ar-Sr-Na；只做正经视频；粉丝群571912431；绿城漫展，使命必达，个人网站www.arsrna.cn</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 Ar-Sr-Na<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2020 Ar-Sr-Na. All right reserved</p>
+    </div>
+    <div class="footer-device">
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo, Hosted by TencentCloud COS & Serverless Framework</a>
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+<script rel=" preload" src="https://res.arsrna.cn/live2dw/lib/L2Dwidget.min.js"></script>
+  <script rel=" preload" type="text/javascript">//初始化
+	L2Dwidget.init({
+				pluginRootPath: "https://res.arsrna.cn/live2dw/",//资源root路径
+				pluginJsPath: "https://res.arsrna.cn/lib/",//js相对root的路径
+				pluginModelPath: "https://res.arsrna.cn/assets/",//模型相对root的路径
+				tagMode: !1,
+				debug: !1,
+				model: {
+					scale: 1,
+					jsonPath: "https://res.arsrna.cn/live2dw/assets/asuna_33.model.json"
+				},
+				display: {
+					position: "left",//position
+					width: 130,//width宽度
+					height: 230,//height高度
+					hOffset: -60,//左右
+					vOffset: 0//上下
+				},
+				mobile: {
+					show: !0
+				},
+				log: !1
+			});</script>
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script src="https://cdn-go.cn/aegis/aegis-sdk/latest/aegis.min.js"></script>
+<script>
+  const aegis = new Aegis({
+    id: 'PR8Q4VBmZvWyA3gmKO', // 上报 id
+    uin: navigator.userAgent, // 用户唯一 ID（可选）
+    reportApiSpeed: true, // 接口测速
+    reportAssetSpeed: true, // 静态资源测速
+    spa: true // spa 应用页面跳转的时候开启 pv 计算
+  });
+</script>
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "https://res.arsrna.cn","name":"videos/Ar-Sr-Na%20%E7%A7%91%E6%99%AE%E9%A1%B9%E7%9B%AE%E5%AE%A3%E4%BC%A0%E7%89%87V2_5.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "https://res.arsrna.cn","name":"videos/Ar-Sr-Na%20%E7%A7%91%E6%99%AE%E9%A1%B9%E7%9B%AE%E5%AE%A3%E4%BC%A0%E7%89%87V2_5.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://res.arsrna.cn/icon2.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">Ar-Sr-Na博客站</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="https://github.com/Ar-Sr-Na" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="https://wpa.qq.com/msgrd?v=3&uin=2459405337&site=qq&menu=yes" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="https://www.arsrna.cn/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            回到主站
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人帐
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/atom.xml">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+            RSS
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="https://www.arsrna.cn/policy/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            政策
+          </span>
+        </a>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="2660651585"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+</body>
+</html>
