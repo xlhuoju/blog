@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.arsrna.ltd/links/index.html</loc>
+    
+    <lastmod>2022-05-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.arsrna.ltd/posts/[08-1202-08-1203]D/</loc>
     
     <lastmod>2022-05-02</lastmod>
@@ -147,15 +156,6 @@
   
   <url>
     <loc>https://www.arsrna.ltd/live/index.html</loc>
-    
-    <lastmod>2022-04-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.arsrna.ltd/links/index.html</loc>
     
     <lastmod>2022-04-05</lastmod>
     

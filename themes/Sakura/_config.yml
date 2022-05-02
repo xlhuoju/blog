@@ -2,17 +2,17 @@
 prefixName: Ar-Sr-Na
 siteName: 博客站
 # favicon and site master avatar
-favicon: /icon2.jpg
-avatar: /icon2.jpg
+favicon: https://res.arsrna.cn/icon2.jpg
+avatar: https://res.arsrna.cn/icon2.jpg
 url: https://www.arsrna.ltd
 description: 女装只有cos90°次和tan90°次
-cdn: https://res.arsrna.cn
+cdn: 
 pjax: 1
 # 1开启
 mathjax: 0
 
-notice: Uvuvwevwevwe Onyetenyevwe Ugwemubwem Ossas
-lazyloadImg: /slsblog/orange.progress-bar-stripe-loader.svg
+notice: 本站地址将于6月29从https://www.arsrna.cn迁移至https://b.arsrna.cn，请及时更换链接
+lazyloadImg: https://res.arsrna.cn/slsblog/orange.progress-bar-stripe-loader.svg
 
 menus:
   首页: { path: /, fa: fa-fort-awesome faa-shake }
@@ -34,8 +34,9 @@ bgclass: filter-dim
 
 # startdash url, title, desc img
 startdash: 
-  - {url: https://space.bilibili.com/24749747, title: Bilibili, desc: bilibili频道, img: /slsblog/bilibili.jpg}
-  - {url: https://www.arsrna.cn, title: 主站, desc: 主站, img: /hdpic.jpg}
+  - {url: https://www.arsrna.cn/app/render/, title: 新应用, desc: ArSrNa 集群调度渲染助手, img: https://res.arsrna.cn/arsrna.cn/cr/workspace.png?imageMogr2/format/webp}
+  - {url: https://www.arsrna.cn/#Dynamics, title: 云计算动态, desc: 主站内容发布, img: https://res.arsrna.cn/arsrna.cn/VOD.png_copwh}
+  - {url: https://www.arsrna.cn, title: 主站, desc: 主站, img: https://www.arsrna.cn/hdpic.jpg}
 
 
 
@@ -44,8 +45,8 @@ siteBuildingTime: 12/12/2018
 
 #social  url, img PC端配置
 social:
-  github: {url: https://github.com/ArSrNa, img: /slsblog/github.png}
-  zhihu: {url: https://www.zhihu.com/people/arsrna-87, img: /slsblog/zhihu.png}
+  github: {url: https://github.com/ArSrNa, img: https://res.arsrna.cn/slsblog/github.png}
+  zhihu: {url: https://www.zhihu.com/people/arsrna-87, img: https://res.arsrna.cn/slsblog/zhihu.png}
 
 #social  url, img 移动端配置
 msocial:
@@ -55,15 +56,15 @@ msocial:
 donate:
   paypal: 
   alipay: 
-  wechat: 
-  wechatSQ: 
+  wechat: https://res.arsrna.cn/sponsor/wechat.JPG?imageMogr2/format/webp
+  wechatSQ: https://res.arsrna.cn/sponsor/alipay.JPG?imageMogr2/format/webp
 
 
 # 视频地址为https://cdn.jsdelivr.net/gh/honjun/hojun@1.2/Unbroken.mp4，配置如下
 movies:
-  url: https://res.arsrna.cn
+  url: https://arsrnasitefr-1257609559.cos.ap-guangzhou.myqcloud.com
   # 多个视频用逗号隔开，随机获取。支持的格式目前已知MP4,Flv。其他的可以试下，不保证有用
-  name: videos/Ar-Sr-Na%20%E7%A7%91%E6%99%AE%E9%A1%B9%E7%9B%AE%E5%AE%A3%E4%BC%A0%E7%89%87V2_5.mp4
+  name: /videos/mmd%E8%83%8C%E6%99%AFweb_x264.mp4
   
 aplayer: 
   id: 2660651585

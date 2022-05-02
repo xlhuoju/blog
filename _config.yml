@@ -5,8 +5,8 @@
 # Site
 title: Ar-Sr-Na 博客站
 subtitle: 全站Serverless
-description: 女装只有cos90°次和tan90°次
-keywords: 科技,互联网,漫展,业余无线电,编程,HTML,php,Ar-Sr-Na,ArSrNa,云存储,互联网+解决方案,云计算,云计算是什么
+description: 突破计算边界，构筑数字视界
+keywords: 科技,互联网,漫展,业余无线电,编程,HTML,php,Ar-Sr-Na,ArSrNa,云存储,互联网+解决方案,云计算,云计算是什么,高性能云计算,GPU服务器,CPU服务器,javascript,全栈开发,blender渲染,电子,PCB,SMT
 author: Ar-Sr-Na
 language: zh-cn
 timezone:
@@ -77,24 +77,6 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: Sakura
-
-# Deployment
-## Docs: https://hexo.io/docs/deployment.html
-deploy:
-  type: git
-  repo: 
-    # github: git@github.com:honjun/honjun.github.io.git
-    # github: https://github.com/honjun/honjun.github.io.git
-    coding: https://git.coding.net/hojun/hojun.git
-  branch: master
-
-# backup
-backup:
-  type: git
-  message: backup my blog of https://yourname.github.io/
-  repository:
-    # github: https://github.com/honjun/honjun.github.io.git,backup
-    coding: https://git.coding.net/hojun/hojun.git,backup
 
 #RSS
 feed:

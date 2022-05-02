@@ -13,17 +13,19 @@ links:
     - url: https://www.arsrna.cn
       img: https://cdn.jsdelivr.net/gh/ArSrNa/CDN/linkv_img/cop/arsrna.webp
       name: Ar-Sr-Na 主站
-      desc: 女装只有cos90°次和tan90°次
+      desc: 突破计算边界，构筑数字视界
 
     - url: https://ysncir.cn
       img: https://www.arsrna.cn/elec/logo.png
-      name: Ar-Sr-Na 半导体
+      name: Ar-Sr-Na 电子
       desc: We shape passionate of every electron
       
-    - url: https://www.arlearn.ltd
+    - url: https://l.arsrna.cn
       img: https://cdn.jsdelivr.net/gh/ArSrNa/CDN/linkv_img/cop/arsrna.webp
       name: Ar-Sr-Na 学习中心
-      desc: 女装只有cos90°次和tan90°次
+      desc: 突破计算边界，构筑数字视界
+
+
     
   - group: 来自博客站的互链
     desc: 欢迎交换友链 ꉂ(ˊᗜˋ)
