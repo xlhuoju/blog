@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">【教程】纯前端做一个歌词显示的音乐播放器 | Ar-Sr-Na 博客站</title>
+  
+    <link rel="shortcut icon" href="/icon2.jpg">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all"> -->
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.css">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "Ar-Sr-Na博客站";
+  mashiro_option.author_name = "博客站";
+  mashiro_option.site_url = "https://www.arsrna.ltd";
+  mashiro_option.v_appId = "bYBEppifUgTsjjChokFXJefz-gzGzoHsz";
+  mashiro_option.v_appKey = "2eq935REyPu1yFkOS5UzRHNJ";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://www.arsrna.cn/hdpic.jpg".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="Ar-Sr-Na 博客站" type="application/atom+xml">
+</head>
+
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop filter-dim">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="https://www.arsrna.ltd">
+          <img src="https://res.arsrna.cn/icon2.jpg">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>女装只有cos90°次和tan90°次</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="https://github.com/ArSrNa" target="_blank" class="social-github" title="github">
+                    <img src="https://res.arsrna.cn/slsblog/github.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://www.zhihu.com/people/arsrna-87" target="_blank" class="social-github" title="zhihu">
+                    <img src="https://res.arsrna.cn/slsblog/zhihu.png">
+                  </a>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">Ar-Sr-Na</span>
+            <span class="shironeko">博客站</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a target="_blank" rel="noopener" href="https://www.arsrna.cn/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    回到主站
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人帐
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/atom.xml">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+                    RSS
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a target="_blank" rel="noopener" href="https://www.arsrna.cn/policy/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    政策
+                  </span>
+                </a>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://arsrnasitehk-1257609559.cos.ap-hongkong.myqcloud.com/blogs/08-1202L08-1203K/QQ%E6%88%AA%E5%9B%BE20210520135833.jpg);" src="/slsblog/orange.progress-bar-stripe-loader.svg" data-src="https://arsrnasitehk-1257609559.cos.ap-hongkong.myqcloud.com/blogs/08-1202L08-1203K/QQ%E6%88%AA%E5%9B%BE20210520135833.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      【教程】纯前端做一个歌词显示的音乐播放器</h1>
+      <p class="entry-census">
+        <span>
+          <a target="_blank" rel="noopener" href="https://www.arsrna.cn">
+            <img src="https://res.arsrna.cn/icon2.jpg">
+          </a>
+        </span>
+        <span>
+          <a target="_blank" rel="noopener" href="https://www.arsrna.cn">Ar-Sr-Na</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2021-5-20<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content">-->
+        	<!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <p>节目：[08-1202L/08-1203K]：【教程】纯前端做一个歌词显示的音乐播放器</p>
+<p><img src="https://res.arsrna.cn/blogs/08-1202L08-1203K/r7yxduv7vk.png" alt="效果"></p>
+<h1 id="用到的文件："><a href="#用到的文件：" class="headerlink" title="用到的文件："></a>用到的文件：</h1><p>Bootstrap 4.6.0 CSS：<a href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.css" target="_blank" rel="noopener">https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.css</a></p>
+<p>一段音乐及这首歌的lrc歌词（只要带时间的都可以，这里用lrc举例）</p>
+<p>浏览器</p>
+<p>jquery（可选，为了查找元素更方便）：<a href="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js" target="_blank" rel="noopener">https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js</a></p>
+<h1 id="原理及实现："><a href="#原理及实现：" class="headerlink" title="原理及实现："></a>原理及实现：</h1><h2 id="音乐播放"><a href="#音乐播放" class="headerlink" title="音乐播放"></a>音乐播放</h2><p>通过html5的<audio>属性进行播放</audio></p>
+<p>这里为了方便不开发进度条和控制进度的工具，直接用各个浏览器渲染的audio标签</p>
+<p>并且宽度设置为100%</p>
+<pre><code>&lt;audio id=&quot;audio&quot; src=&quot;mp3/Flower - 秋風のアンサー.mp3&quot; controls style=&quot;width:100%&quot;&gt;&lt;/audio&gt;
+</code></pre><p><strong>注意，audio要指定一个id，方便后续获取</strong></p>
+<h2 id="歌曲显示"><a href="#歌曲显示" class="headerlink" title="歌曲显示"></a>歌曲显示</h2><p>自己设置好</p>
+<p><img src="https://res.arsrna.cn/blogs/08-1202L08-1203K/u0ek1jo0fc.png" alt></p>
+<p>为了美观，我用Bootstrap的jumbotrom大块屏</p>
+<pre><code>&lt;div class=&quot;jumbotron&quot;&gt;
+        &lt;h1 class=&quot;display-4&quot;&gt;秋風のアンサー&lt;/h1&gt;
+        &lt;p class=&quot;lead&quot;&gt;Flower&lt;/p&gt;
+&lt;/div&gt;
+</code></pre><h1 id="歌词显示（核心部分）"><a href="#歌词显示（核心部分）" class="headerlink" title="歌词显示（核心部分）"></a>歌词显示（核心部分）</h1><h2 id="预设置："><a href="#预设置：" class="headerlink" title="预设置："></a>预设置：</h2><p>因为LRC是timelrc 的格式，js不能读取，但js有个很相似的格式：json，因此我们可以把lrc转为json，类似于：</p>
+<pre><code>[00:01.00]powered
+[00:02.00]by
+[00:03.00]Ar-Sr-Na
+</code></pre><pre><code>{&quot;time&quot;:1,&quot;lrc&quot;:&quot;Powered&quot;},
+{&quot;time&quot;:2,&quot;lrc&quot;:&quot;by&quot;},
+{&quot;time&quot;:3,&quot;lrc&quot;:&quot;Ar-Sr-Na&quot;},
+</code></pre><p>所以先要处理lrc</p>
+<p>用sublime打开lrc</p>
+<p><img src="https://res.arsrna.cn/blogs/08-1202L08-1203K/v92y1vmqj6.png" alt></p>
+<p>鼠标对准第一个中括号，按住中键不放，指针将会一直沿着你鼠标的方向选择，滑到最底部选中所有时间</p>
+<p><img src="https://res.arsrna.cn/blogs/08-1202L08-1203K/0lhfuwmmxc.png" alt></p>
+<p>Ctrl+C复制，在Excel里粘贴</p>
+<p><img src="https://res.arsrna.cn/blogs/08-1202L08-1203K/xndrtzk5wl.png" alt></p>
+<p>最好留两个单元格计算</p>
+<p>分钟单元格输入函数：=LEFT(C2,2)；C2是你的LRC时间所在单元格，下同</p>
+<p>秒数单元格输入函数：=RIGHT(C2,5)</p>
+<p>这样分秒就分离了</p>
+<p>然后将分钟+秒变成js能读取的时间</p>
+<p>输入函数：=分钟单元格*60+秒钟单元格</p>
+<p>鼠标在单元格右下角下拖快速填充到底</p>
+<p>同样用Sublime，在第一个”]”右中括号那里按住中键选择（注意最好选择进中键，不然对于有些空行的歌词会复制不了）</p>
+<p><img src="https://res.arsrna.cn/blogs/08-1202L08-1203K/3wlg6vt78v.png" alt></p>
+<p>粘贴进Excel</p>
+<p><img src="https://res.arsrna.cn/blogs/08-1202L08-1203K/3foiexpflb.png" alt></p>
+<p>然后替换 ] 为 空</p>
+<p>复制具有时间和歌词的两列，去到Excel转json的网站</p>
+<p><a href="https://www.bejson.com/json/col2json/" target="_blank" rel="noopener">在线Excel、CSV转JSON格式-BeJSON.com</a></p>
+<p><img src="https://res.arsrna.cn/blogs/08-1202L08-1203K/lexcaixaw8.png" alt></p>
+<p>转换完毕，接下来就是匹配歌词然后播放了</p>
+<h2 id="匹配音频和歌词时间点"><a href="#匹配音频和歌词时间点" class="headerlink" title="匹配音频和歌词时间点"></a>匹配音频和歌词时间点</h2><p>这部分我想了很久，一直没办法找到方法，现在有个问题，我想让每句播放的时候来个动画，但是现在刷新频率太快，各位大佬支个招吧</p>
+<p>html里添加个显示歌词的元素，我用span，并且用Bootstrap的字体</p>
+<pre><code>&lt;span id=&quot;lrc&quot; class=&quot;lead&quot;&gt;&lt;/span&gt;
+</code></pre><p><strong>注意，文本要指定一个id，方便后续获取</strong></p>
+<p>js里有个操作，currentTime</p>
+<p>给歌词json赋值</p>
+<pre><code>var lrcjson = {&quot;time&quot;:261.96,&quot;lrc&quot;:&quot;ごめんね 好きなの Answer to you&quot;},{......};
+</code></pre><p>获取音频和文字控件：</p>
+<pre><code>var audio = document.getElementById(&#39;audio&#39;);
+var lrcHTML= document.getElementById(&#39;lrc&#39;);
+</code></pre><p>要匹配音频和歌词时间点，就要不断判断和遍历歌词数组</p>
+<p>遍历数组可以这样来：</p>
+<pre><code>for(i1=0;i1&lt;lrcjson.length;i1++) {
+//每句歌词时间：lrcjson[i1].time
+//每句歌词：lrcjson[i1].lrc
+]
+</code></pre><h2 id="判断音频与对应歌词"><a href="#判断音频与对应歌词" class="headerlink" title="判断音频与对应歌词"></a>判断音频与对应歌词</h2><p>直接用audio.currentTime与上述遍历数组查找lrcjsoni1.time是行不通的，因为他们的时间点不可能完全精确，有0.01ms的误差都不行</p>
+<p><img src="https://res.arsrna.cn/blogs/08-1202L08-1203K/4df1i9zmn6.png" alt="浏览器获取的音频进度"></p>
+<p><img src="https://res.arsrna.cn/blogs/08-1202L08-1203K/n5ghnu2m1r.png" alt="应该对应的歌词"></p>
+<pre><code>{&quot;time&quot;:122.09,&quot;lrc&quot;:&quot;不安なのよ だからお願い&quot;},
+</code></pre><p>所以只能用模糊搜索</p>
+<h3 id="当当前时间大于数组里某个数组的时间大小时，判定就是该数组，通过该数组就能获取到时间和歌词从而显示"><a href="#当当前时间大于数组里某个数组的时间大小时，判定就是该数组，通过该数组就能获取到时间和歌词从而显示" class="headerlink" title="当当前时间大于数组里某个数组的时间大小时，判定就是该数组，通过该数组就能获取到时间和歌词从而显示"></a>当当前时间大于数组里某个数组的时间大小时，判定就是该数组，通过该数组就能获取到时间和歌词从而显示</h3><p>当音频播放时不断执行事件：</p>
+<pre><code>audio.ontimeupdate=function(e) { }
+</code></pre><p>遍历歌词的同时不断查找匹配歌词</p>
+<pre><code>for(i1=0;i1&lt;lrcjson.length;i1++) {
+    if (audio.currentTime &gt; lrcjson[i1].timeout) {
+   //歌词：lrcjson[i1].lrc
+    }
+   }
+</code></pre><p>播放的时候不断查找，不断遍历数组</p>
+<pre><code>audio.ontimeupdate=function(e){
+for(i1=0;i1&lt;lrcjson.length;i1++) {
+  if(audio.currentTime &gt; lrcjson[i1].timeout) {
+  //歌词：lrcjson[i1].lrc
+   }
+ }
+}
+</code></pre><p>如果你用console输出，就会看到速度非常快，所以不适合在html创建元素或者document.write，只能用innerHTML不断刷新元素</p>
+<p>前面已经讲到获取歌词元素了，所以直接可以对歌词操作：</p>
+<pre><code>lrc.innerHTML=lrcjson[i1].lrc;
+</code></pre><h2 id="总代码"><a href="#总代码" class="headerlink" title="总代码"></a>总代码</h2><p>Javascript</p>
+<pre><code>lrcjson = {&quot;time&quot;:261.96,&quot;lrc&quot;:&quot;ごめんね 好きなの Answer to you&quot;},{...}
+lrc = document.getElementById(&#39;lrc&#39;);
+audio.ontimeupdate=function(e) {
+for(i1=0;i1&lt;lrcjson.length;i1++) {
+    if (audio.currentTime &gt; lrcjson[i1].time) {
+        lrc.innerHTML=lrcjson[i1].lrc;
+    }
+   }
+}
+</code></pre><p>HTML：</p>
+<pre><code>&lt;div class=&quot;jumbotron&quot;&gt;
+    &lt;h1 class=&quot;display-4&quot;&gt;秋風のアンサー&lt;/h1&gt;
+    &lt;p class=&quot;lead&quot;&gt;Flower&lt;/p&gt;
+    &lt;span class=&quot;lead&quot; type=&quot;text&quot; id=&quot;lrc&quot;&gt;&lt;/span&gt;
+    &lt;br /&gt;
+    &lt;audio id=&quot;audio&quot; src=&quot;mp3/Flower - 秋風のアンサー.mp3&quot; controls style=&quot;width:100%&quot;&gt;&lt;/audio&gt;
+&lt;/div&gt;
+</code></pre><p>预览：</p>
+<p><a href="https://codepen.io/arsrna/full/vYxyqaK" target="_blank" rel="noopener">https://codepen.io/arsrna/full/vYxyqaK</a></p>
+<h1 id="Powered-by-Ar-Sr-Na（www-arsrna-cn）"><a href="#Powered-by-Ar-Sr-Na（www-arsrna-cn）" class="headerlink" title="Powered by Ar-Sr-Na（www.arsrna.cn）"></a>Powered by Ar-Sr-Na（<a href="https://www.arsrna.cn" target="_blank" rel="noopener">www.arsrna.cn</a>）</h1><h1 id="到此，教程结束-未经允许禁止转载！"><a href="#到此，教程结束-未经允许禁止转载！" class="headerlink" title="到此，教程结束 未经允许禁止转载！"></a>到此，教程结束 未经允许禁止转载！</h1>
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://res.arsrna.cnnull"></li>
+                <li class="wechat-code"><img src="https://res.arsrna.cnnull"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/posts/0000-D-2021gk/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="/slsblog/orange.progress-bar-stripe-loader.svg" data-src="https://res.arsrna.cn/blogs/0000-D-2021gk/fm.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://res.arsrna.cn/blogs/0000-D-2021gk/fm.jpg">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                【Ar-Sr-Na X 南宁十中】继续前行-2021高考加油！</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/posts/08-1202H-08-1203G/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="/slsblog/orange.progress-bar-stripe-loader.svg" data-src="https://res.arsrna.cn/images/0d984241d34683b83f0de9ec3f00231d920df77a.png_WH" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://res.arsrna.cn/images/0d984241d34683b83f0de9ec3f00231d920df77a.png_WH">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                我开发了一根进度条 [08-1202H/08-1203G]</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "bYBEppifUgTsjjChokFXJefz-gzGzoHsz",
+        appKey: "2eq935REyPu1yFkOS5UzRHNJ",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a target="_blank" rel="noopener" href="https://www.arsrna.cn" class="profile gravatar"><img src="https://res.arsrna.cn/icon2.jpg" itemprop="image" alt="Ar-Sr-Na" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a target="_blank" href="https://www.arsrna.cn" itemprop="url" rel="author noopener">Ar-Sr-Na</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>微博Ar-Sr-Na；只做正经视频；粉丝群571912431；邕城漫展，使命必达，个人网站www.arsrna.cn</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 Ar-Sr-Na<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2020 Ar-Sr-Na. All right reserved</p>
+    </div>
+    <div class="footer-device">
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo, Hosted by TencentCloud COS & Serverless Framework</a>
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+<script rel=" preload" src="https://res.arsrna.cn/live2dw/lib/L2Dwidget.min.js"></script>
+  <script rel=" preload" type="text/javascript">//初始化
+	L2Dwidget.init({
+				pluginRootPath: "https://res.arsrna.cn/live2dw/",//资源root路径
+				pluginJsPath: "https://res.arsrna.cn/lib/",//js相对root的路径
+				pluginModelPath: "https://res.arsrna.cn/assets/",//模型相对root的路径
+				tagMode: !1,
+				debug: !1,
+				model: {
+					scale: 1,
+					jsonPath: "https://res.arsrna.cn/live2dw/assets/asuna_33.model.json"
+				},
+				display: {
+					position: "left",//position
+					width: 130,//width宽度
+					height: 230,//height高度
+					hOffset: -60,//左右
+					vOffset: 0//上下
+				},
+				mobile: {
+					show: !0
+				},
+				log: !1
+			});</script>
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script src="https://cdn-go.cn/aegis/aegis-sdk/latest/aegis.min.js"></script>
+<script>
+  const aegis = new Aegis({
+    id: 'PR8Q4VBmZvWyA3gmKO', // 上报 id
+    uin: navigator.userAgent, // 用户唯一 ID（可选）
+    reportApiSpeed: true, // 接口测速
+    reportAssetSpeed: true, // 静态资源测速
+    spa: true // spa 应用页面跳转的时候开启 pv 计算
+  });
+</script>
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "https://res.arsrna.cn","name":"videos/Ar-Sr-Na%20%E7%A7%91%E6%99%AE%E9%A1%B9%E7%9B%AE%E5%AE%A3%E4%BC%A0%E7%89%87V2_5.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "https://res.arsrna.cn","name":"videos/Ar-Sr-Na%20%E7%A7%91%E6%99%AE%E9%A1%B9%E7%9B%AE%E5%AE%A3%E4%BC%A0%E7%89%87V2_5.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://res.arsrna.cn/icon2.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">Ar-Sr-Na博客站</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="https://github.com/Ar-Sr-Na" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="https://wpa.qq.com/msgrd?v=3&uin=2459405337&site=qq&menu=yes" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a target="_blank" rel="noopener" href="https://www.arsrna.cn/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            回到主站
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人帐
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/atom.xml">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+            RSS
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a target="_blank" rel="noopener" href="https://www.arsrna.cn/policy/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            政策
+          </span>
+        </a>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="2660651585"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+</body>
+</html>

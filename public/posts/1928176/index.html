@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">【腾讯云前端性能(RUM)优化大赛】针对前端的通用用户首屏体验(LCP)优化 | Ar-Sr-Na 博客站</title>
+  
+    <link rel="shortcut icon" href="/icon2.jpg">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all"> -->
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.css">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "Ar-Sr-Na博客站";
+  mashiro_option.author_name = "博客站";
+  mashiro_option.site_url = "https://www.arsrna.ltd";
+  mashiro_option.v_appId = "bYBEppifUgTsjjChokFXJefz-gzGzoHsz";
+  mashiro_option.v_appKey = "2eq935REyPu1yFkOS5UzRHNJ";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://www.arsrna.cn/hdpic.jpg".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="Ar-Sr-Na 博客站" type="application/atom+xml">
+</head>
+
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop filter-dim">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="https://www.arsrna.ltd">
+          <img src="https://res.arsrna.cn/icon2.jpg">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>女装只有cos90°次和tan90°次</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="https://github.com/ArSrNa" target="_blank" class="social-github" title="github">
+                    <img src="https://res.arsrna.cn/slsblog/github.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://www.zhihu.com/people/arsrna-87" target="_blank" class="social-github" title="zhihu">
+                    <img src="https://res.arsrna.cn/slsblog/zhihu.png">
+                  </a>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">Ar-Sr-Na</span>
+            <span class="shironeko">博客站</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a target="_blank" rel="noopener" href="https://www.arsrna.cn/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    回到主站
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人帐
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/atom.xml">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+                    RSS
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a target="_blank" rel="noopener" href="https://www.arsrna.cn/policy/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    政策
+                  </span>
+                </a>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1928716/6df4782deccb2d980e16bf366f1f38a7.jpeg);" src="/slsblog/orange.progress-bar-stripe-loader.svg" data-src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1928716/6df4782deccb2d980e16bf366f1f38a7.jpeg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      【腾讯云前端性能(RUM)优化大赛】针对前端的通用用户首屏体验(LCP)优化</h1>
+      <p class="entry-census">
+        <span>
+          <a href="www.arsrna.cn">
+            <img src="https://res.arsrna.cn/icon2.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="www.arsrna.cn">Ar-Sr-Na</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2022-1-3<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content">-->
+        	<!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1928716/6df4782deccb2d980e16bf366f1f38a7.jpeg" alt></p>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h2 id="根据文档接入腾讯云RUM"><a href="#根据文档接入腾讯云RUM" class="headerlink" title="根据文档接入腾讯云RUM"></a>根据文档接入腾讯云RUM</h2><p><a href="https://cloud.tencent.com/document/product/1464/58134" target="_blank" rel="noopener">前端性能监控 快速入门 - 文档中心 - 腾讯云 (tencent.com)</a></p>
+<pre><code>const aegis = new Aegis({
+        id: &#39;xxxx&#39;, // 上报 id
+        uin: &#39;xxx&#39;, // 用户唯一 ID（可选）
+        reportApiSpeed: true, // 接口测速
+        spa: true // spa 应用页面跳转的时候开启 pv 计算
+    });
+</code></pre><h2 id="检查是否完成接入"><a href="#检查是否完成接入" class="headerlink" title="检查是否完成接入"></a>检查是否完成接入</h2><p>部署已经完成构建的站点</p>
+<pre><code>serverless -deploy
+</code></pre><p>console中键入<aegis>出现</aegis></p>
+<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1928716/3c7f7e41a0806a4d7a686102993d4f66.png" alt></p>
+<p>即可</p>
+<hr>
+<h1 id="数据结果分析"><a href="#数据结果分析" class="headerlink" title="数据结果分析"></a>数据结果分析</h1><p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1928716/aceec8a6f6822dc8707785ddc5e1298a.png" alt></p>
+<p>针对首屏加载，需要注意的分为以下几项：</p>
+<h2 id="1-网络优化"><a href="#1-网络优化" class="headerlink" title="1.网络优化"></a>1.网络优化</h2><p>网络的问题可以通过DNS优化，CDN，后端的优化</p>
+<p>利用ping等工具 可以直观了解到各个地区的速度情况</p>
+<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1928716/2d4d392016e20937d64b1977c7bc33c9.png" alt></p>
+<p>由于站点部署在中国香港，所以大陆西北地区速度会下降，解决办法就是多部署几个后端，然后负载均衡，必要的时候还要对网络运营商进行分别解析，均衡</p>
+<p>由于本站的后端是架设在腾讯云的对象存储上的，所以对于地域的切换与管理比较灵活</p>
+<p>对于未备案站点：华南地区优化建议解析中国香港，华北地区建议解析俄罗斯</p>
+<p>如果是备案站点：直接接入CDN，更灵活地改变地域性能以及速度，延迟</p>
+<p>因为网络一旦确定，就无法更改他的性能，而且受运营商和服务商的影响较大，但是对于用户来说，网络性能不是重点，因为合格的服务商，速度都不会太慢，大部分都在500ms以内，本地有的可以到达10ms以内</p>
+<p>这个延迟也会影响性能，不断地请求，数据量巨大，每个数据就得经历这一个个延迟，所以于网络优化对前端性能优化数据也是至关重要的</p>
+<h2 id="2-资源"><a href="#2-资源" class="headerlink" title="2.资源"></a>2.资源</h2><p>除了延迟，网络速度也是很重要的一关，由于html的特性，资源都是由文档上往下同步加载，即加载完A再加载B，比如</p>
+<pre><code>&lt;img src=&quot;资源A&quot;&gt;
+&lt;img src=&quot;资源B&quot;&gt;
+&lt;script src=&quot;资源C&quot;&gt;&lt;/script&gt;
+</code></pre><p>若资源A耗时0.1s，资源B耗时0.2s，资源C耗时0.5s，总共加起来就是0.8s</p>
+<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1928716/4f11c3bb72a3b460e8108388e90cd111.png" alt></p>
+<p>首屏速度最关键的是LCP，也就是框架加载出来的时间，这对index要求很高，如果大块文件在index太慢，则会拖慢速度</p>
+<p>在后端的index，一般100k以内最好</p>
+<p>如果是php渲染的index，不仅加载的时候会占用服务器后端资源，前端也会一片空白，非常缓慢，就如WordPress和hexo两者性能一样</p>
+<p>例如这一段代码</p>
+<pre><code>&lt;head&gt;
+&lt;script src=&quot;xxxxx&quot;&gt;&lt;/script&gt;
+&lt;link href=&quot;xxx.css&quot; rel=&quot;stylesheet&quot;/&gt;
+&lt;script&gt;
+$(document).ready(function(){
+$(&#39;#text&#39;).html(&#39;我永远喜欢薇尔莉特&#39;)
+})
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div&gt;
+&lt;p&gt;
+    薇尔莉特·伊芙加登是日本轻小说作家晓佳奈创作的轻小说《紫罗兰永恒花园》及其衍生作品中的女主角
+    隶属C·H邮政公司的「自动手记人偶」少女，拥有罕见的战斗力。
+    幼年时被迪特福利特上校从战争中捡到，在发觉薇尔莉特有着非凡的战斗天赋后将其作为「战斗兵器」赠送给他的弟弟——基尔伯特·布甘比利亚少校。
+    此后薇尔莉特就跟随着基尔伯特少校，两人的关系在战争中也愈加紧密
+&lt;/p&gt;
+&lt;img src=&quot;https://res.arsrna.cn/wallpaper/WELT%20(17).jpg_copwh&quot;&gt;
+&lt;video src=&quot;xxxxx&quot;&gt;&lt;/video&gt;
+&lt;h1 id=&quot;text&quot;&gt;&lt;/h1&gt;
+
+&lt;/div&gt;
+&lt;/body&gt;
+</code></pre><p>他的加载顺序如下：</p>
+<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1928716/45dc0d349b47b5094b109f32488ce055.png" alt></p>
+<p>当我们打开页面时，先加载了header最顶端的Script，同时CSS异步加载</p>
+<p>当JavaScript加载完成时开始加载DOM，同时CSS继续渲染</p>
+<p>DOM的加载也是从上到下，先到最大的div，再依次加载</p>
+<p>图片和视频是大文件，html可以让他们异步加载，所以图中video实际上是dom的加载，资源的加载在后面的互动资源加载</p>
+<p>LCP不记录后面资源的加载，所以这一步video对LCP性能影响不大，影响的是img，因为img需要显示出图片才算加载完框架了，而video则是根据用户设置的宽高就算加载完</p>
+<p>到这里整个页面已经出来了</p>
+<p>$(document).ready()方法也开始执行，H1开始渲染出内容<strong>“我永远喜欢薇尔莉特”</strong></p>
+<p>视频和图片在这里占据大量的资源，如果不是在最头部或者很重要的话，建议加上 preload=”none” 属性，等待用户手动操作再加载，这样就不会占用其他资源加载的时间了</p>
+<p>JavaScript代码，如果是jQuery这类要在页面没加载前执行的，可以放在头部；如果是用户触发才执行或者是插件的话，建议放在body外面，先加载完dom再加载脚本，减少dom渲染时间</p>
+<p>同样地，因为每次加载都要请求一遍，所以这些小资源尽量做成一个bundle，即一堆js写在一个js里面，不然每次都需要请求请求请求，占据大量时间</p>
+<p>很多很多的小图片，也建议像上面的方法进行处理，变成一张大图，后续通过background位置去调整要显示的地方</p>
+<h2 id="3-渲染性能"><a href="#3-渲染性能" class="headerlink" title="3.渲染性能"></a>3.渲染性能</h2><p>后续用户会点击视频，点击的时候就会触发加载，互动事件启动</p>
+<p>如果是JavaScript在计算的，由于JavaScript原生异步，所以只按照时长最长的事件计算时间</p>
+<p>同步部分继续计时（延迟操作setTimeout或者计时器setInterval除外）</p>
+<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1928716/dcb3b77eb12533173a2d772449a8f9e6.png" alt></p>
+<h2 id="少用PHP等占大内存的脚本渲染大的html页面，会造成资源浪费"><a href="#少用PHP等占大内存的脚本渲染大的html页面，会造成资源浪费" class="headerlink" title="少用PHP等占大内存的脚本渲染大的html页面，会造成资源浪费"></a>少用PHP等占大内存的脚本渲染大的html页面，会造成资源浪费</h2><p>能纯前端尽量纯前端，减少ajax造成的耗时</p>
+<p>媒体大文件，无必要建议不预加载</p>
+<h2 id="4-适当利用缓存"><a href="#4-适当利用缓存" class="headerlink" title="4.适当利用缓存"></a>4.适当利用缓存</h2><p>为浏览器设置足够合适的缓存</p>
+<p>html建议2小时，css，视频等不常更新的资源建议设置5天，这样用户重复加载的时候就不会从头开始慢慢缓存，</p>
+<pre><code>&lt;meta http-equiv=&quot;Cache-Control&quot; content=&quot;max-age=7200&quot; /&gt;
+</code></pre><h1 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h1><p>做好以上这些，可以大大提升前端性能，本网站</p>
+<p>优化前网络：腾讯云对象存储-中国香港直连  南方48ms  北方100ms</p>
+<p>优化后网络：腾讯云对象存储-中国香港，俄罗斯，新加坡  20ms-80ms</p>
+<p>优化前LCP：8000ms</p>
+<p>优化后LCP：1500ms</p>
+<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1928716/28010cf21f121b8fb828e2d555c3e30e.png" alt="1500ms的时候已经加载完框架，2000ms的时候已经加载完整个页面"></p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>网络优化：多地区设置多解析，针对地域进行优化</p>
+<p>加载优化：打包JavaScript，css，不必要脚本丢页底</p>
+<p>内容优化：减少不必要的DOM和视频图片预加载</p>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://res.arsrna.cnnull"></li>
+                <li class="wechat-code"><img src="https://res.arsrna.cnnull"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/posts/%5B08-1202-08-1203%5DD/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="/slsblog/orange.progress-bar-stripe-loader.svg" data-src="https://res.arsrna.cn/def.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://res.arsrna.cn/def.jpg">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                春节期间部分服务SLA公告：[08-1202/08-1203]D</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/posts/08-1202S-08-1203R/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="/slsblog/orange.progress-bar-stripe-loader.svg" data-src="https://res.arsrna.cn/blogs/08-1202S-08-1203R/hdpic.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://res.arsrna.cn/blogs/08-1202S-08-1203R/hdpic.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                【教程】纯原生异步特性，教你用JavaScript快速获取壁纸站</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "bYBEppifUgTsjjChokFXJefz-gzGzoHsz",
+        appKey: "2eq935REyPu1yFkOS5UzRHNJ",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="www.arsrna.cn" class="profile gravatar"><img src="https://res.arsrna.cn/icon2.jpg" itemprop="image" alt="Ar-Sr-Na" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="www.arsrna.cn" itemprop="url" rel="author">Ar-Sr-Na</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>突破计算边界，构筑数字视界，www.arsrna.cn</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 Ar-Sr-Na<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2020 Ar-Sr-Na. All right reserved</p>
+    </div>
+    <div class="footer-device">
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo, Hosted by TencentCloud COS & Serverless Framework</a>
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+<script rel=" preload" src="https://res.arsrna.cn/live2dw/lib/L2Dwidget.min.js"></script>
+  <script rel=" preload" type="text/javascript">//初始化
+	L2Dwidget.init({
+				pluginRootPath: "https://res.arsrna.cn/live2dw/",//资源root路径
+				pluginJsPath: "https://res.arsrna.cn/lib/",//js相对root的路径
+				pluginModelPath: "https://res.arsrna.cn/assets/",//模型相对root的路径
+				tagMode: !1,
+				debug: !1,
+				model: {
+					scale: 1,
+					jsonPath: "https://res.arsrna.cn/live2dw/assets/asuna_33.model.json"
+				},
+				display: {
+					position: "left",//position
+					width: 130,//width宽度
+					height: 230,//height高度
+					hOffset: -60,//左右
+					vOffset: 0//上下
+				},
+				mobile: {
+					show: !0
+				},
+				log: !1
+			});</script>
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script src="https://cdn-go.cn/aegis/aegis-sdk/latest/aegis.min.js"></script>
+<script>
+  const aegis = new Aegis({
+    id: 'PR8Q4VBmZvWyA3gmKO', // 上报 id
+    uin: navigator.userAgent, // 用户唯一 ID（可选）
+    reportApiSpeed: true, // 接口测速
+    reportAssetSpeed: true, // 静态资源测速
+    spa: true // spa 应用页面跳转的时候开启 pv 计算
+  });
+</script>
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "https://res.arsrna.cn","name":"videos/Ar-Sr-Na%20%E7%A7%91%E6%99%AE%E9%A1%B9%E7%9B%AE%E5%AE%A3%E4%BC%A0%E7%89%87V2_5.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "https://res.arsrna.cn","name":"videos/Ar-Sr-Na%20%E7%A7%91%E6%99%AE%E9%A1%B9%E7%9B%AE%E5%AE%A3%E4%BC%A0%E7%89%87V2_5.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://res.arsrna.cn/icon2.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">Ar-Sr-Na博客站</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="https://github.com/Ar-Sr-Na" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="https://wpa.qq.com/msgrd?v=3&uin=2459405337&site=qq&menu=yes" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a target="_blank" rel="noopener" href="https://www.arsrna.cn/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            回到主站
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人帐
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/atom.xml">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+            RSS
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a target="_blank" rel="noopener" href="https://www.arsrna.cn/policy/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            政策
+          </span>
+        </a>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="2660651585"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+</body>
+</html>
