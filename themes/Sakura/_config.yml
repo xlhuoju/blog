@@ -11,7 +11,7 @@ pjax: 1
 # 1开启
 mathjax: 0
 
-notice: 本站地址将于6月29从https://www.arsrna.cn迁移至https://b.arsrna.cn，请及时更换链接
+notice: 本站地址将于6月29从https://www.arsrna.ltd迁移至https://b.arsrna.cn，请及时更换链接
 lazyloadImg: https://res.arsrna.cn/slsblog/orange.progress-bar-stripe-loader.svg
 
 menus:
