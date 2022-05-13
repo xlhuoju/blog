@@ -50,6 +50,16 @@ links:
       name: echeverra
       desc: Let`s go, together.
 
+    - url: https://choubaguai.net/
+      img: 
+      name: 丑八怪
+      desc: 云原生技术小栈
+
+    - url: https://blog.luorogers.com/
+      img: https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/linkHeads/luorogers.png
+      name: Rogers
+      desc: この素晴らしい世界に祝福を！
+
 
       
   - group: 请及时更改
