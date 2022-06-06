@@ -4,14 +4,14 @@ siteName: 博客站
 # favicon and site master avatar
 favicon: https://res.arsrna.cn/icon2.jpg
 avatar: https://res.arsrna.cn/icon2.jpg
-url: https://www.arsrna.ltd
+url: https://b.arsrna.cn
 description: 女装只有cos90°次和tan90°次
 cdn: 
 pjax: 1
 # 1开启
 mathjax: 0
 
-notice: 本站地址将于6月29从https://www.arsrna.ltd迁移至https://b.arsrna.cn，请及时更换链接
+notice: 本站地址迁移至https://b.arsrna.cn，请及时更换链接；CDN于2022-6-6已完成更换
 lazyloadImg: https://res.arsrna.cn/slsblog/orange.progress-bar-stripe-loader.svg
 
 menus:

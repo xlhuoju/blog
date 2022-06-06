@@ -10,8 +10,8 @@
   
   <meta http-equiv="x-dns-prefetch-control" content="on">
   <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all"> -->
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.css">
+  <link rel="dns-prefetch" href="https://fastly.jsdelivr.net">
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.css">
   <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
   <link rel="stylesheet" href="/css/lib.min.css" media="all">
   <link rel="stylesheet" href="/css/font.css" media="all">
@@ -36,14 +36,14 @@
   mashiro_option.qzone_autocomplete = false;
   mashiro_option.site_name = "Ar-Sr-Na博客站";
   mashiro_option.author_name = "博客站";
-  mashiro_option.site_url = "https://www.arsrna.ltd";
+  mashiro_option.site_url = "https://b.arsrna.cn";
   mashiro_option.v_appId = "bYBEppifUgTsjjChokFXJefz-gzGzoHsz";
   mashiro_option.v_appKey = "2eq935REyPu1yFkOS5UzRHNJ";
   mashiro_option.mathjax = "0";
   mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
   mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
 
-  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.jsdelivr_css_src = "https://fastly.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
   // mashiro_option.float_player_on = true;
 
   /*End of Initial Variables*/
@@ -74,7 +74,7 @@
   <figure id="centerbg" class="centerbg">
     <div class="focusinfo no-select">
       <div class="header-tou">
-        <a href="https://www.arsrna.ltd">
+        <a href="https://b.arsrna.cn">
           <img src="https://res.arsrna.cn/icon2.jpg">
         </a>
       </div>
@@ -82,7 +82,7 @@
         <p>女装只有cos90°次和tan90°次</p>
         <div class="top-social_v2">
           <li id="bg-pre">
-            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+            <img class="flipx" src="https://fastly.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
           </li>
           
             
@@ -104,7 +104,7 @@
             
           
           <li id="bg-next">
-            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+            <img src="https://fastly.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
           </li>
         </div>
       </div>
@@ -251,25 +251,27 @@
         	<!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1928716/6df4782deccb2d980e16bf366f1f38a7.jpeg" alt></p>
-<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h2 id="根据文档接入腾讯云RUM"><a href="#根据文档接入腾讯云RUM" class="headerlink" title="根据文档接入腾讯云RUM"></a>根据文档接入腾讯云RUM</h2><p><a href="https://cloud.tencent.com/document/product/1464/58134" target="_blank" rel="noopener">前端性能监控 快速入门 - 文档中心 - 腾讯云 (tencent.com)</a></p>
-<pre><code>const aegis = new Aegis({
+          <p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1928716/6df4782deccb2d980e16bf366f1f38a7.jpeg"></p>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h2 id="根据文档接入腾讯云RUM"><a href="#根据文档接入腾讯云RUM" class="headerlink" title="根据文档接入腾讯云RUM"></a>根据文档接入腾讯云RUM</h2><p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/document/product/1464/58134">前端性能监控 快速入门 - 文档中心 - 腾讯云 (tencent.com)</a></p>
+<pre><code>const aegis = new Aegis(&#123;
         id: &#39;xxxx&#39;, // 上报 id
         uin: &#39;xxx&#39;, // 用户唯一 ID（可选）
         reportApiSpeed: true, // 接口测速
         spa: true // spa 应用页面跳转的时候开启 pv 计算
-    });
-</code></pre><h2 id="检查是否完成接入"><a href="#检查是否完成接入" class="headerlink" title="检查是否完成接入"></a>检查是否完成接入</h2><p>部署已经完成构建的站点</p>
+    &#125;);
+</code></pre>
+<h2 id="检查是否完成接入"><a href="#检查是否完成接入" class="headerlink" title="检查是否完成接入"></a>检查是否完成接入</h2><p>部署已经完成构建的站点</p>
 <pre><code>serverless -deploy
-</code></pre><p>console中键入<aegis>出现</aegis></p>
-<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1928716/3c7f7e41a0806a4d7a686102993d4f66.png" alt></p>
+</code></pre>
+<p>console中键入<aegis>出现</p>
+<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1928716/3c7f7e41a0806a4d7a686102993d4f66.png"></p>
 <p>即可</p>
 <hr>
-<h1 id="数据结果分析"><a href="#数据结果分析" class="headerlink" title="数据结果分析"></a>数据结果分析</h1><p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1928716/aceec8a6f6822dc8707785ddc5e1298a.png" alt></p>
+<h1 id="数据结果分析"><a href="#数据结果分析" class="headerlink" title="数据结果分析"></a>数据结果分析</h1><p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1928716/aceec8a6f6822dc8707785ddc5e1298a.png"></p>
 <p>针对首屏加载，需要注意的分为以下几项：</p>
 <h2 id="1-网络优化"><a href="#1-网络优化" class="headerlink" title="1.网络优化"></a>1.网络优化</h2><p>网络的问题可以通过DNS优化，CDN，后端的优化</p>
 <p>利用ping等工具 可以直观了解到各个地区的速度情况</p>
-<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1928716/2d4d392016e20937d64b1977c7bc33c9.png" alt></p>
+<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1928716/2d4d392016e20937d64b1977c7bc33c9.png"></p>
 <p>由于站点部署在中国香港，所以大陆西北地区速度会下降，解决办法就是多部署几个后端，然后负载均衡，必要的时候还要对网络运营商进行分别解析，均衡</p>
 <p>由于本站的后端是架设在腾讯云的对象存储上的，所以对于地域的切换与管理比较灵活</p>
 <p>对于未备案站点：华南地区优化建议解析中国香港，华北地区建议解析俄罗斯</p>
@@ -280,8 +282,9 @@
 <pre><code>&lt;img src=&quot;资源A&quot;&gt;
 &lt;img src=&quot;资源B&quot;&gt;
 &lt;script src=&quot;资源C&quot;&gt;&lt;/script&gt;
-</code></pre><p>若资源A耗时0.1s，资源B耗时0.2s，资源C耗时0.5s，总共加起来就是0.8s</p>
-<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1928716/4f11c3bb72a3b460e8108388e90cd111.png" alt></p>
+</code></pre>
+<p>若资源A耗时0.1s，资源B耗时0.2s，资源C耗时0.5s，总共加起来就是0.8s</p>
+<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1928716/4f11c3bb72a3b460e8108388e90cd111.png"></p>
 <p>首屏速度最关键的是LCP，也就是框架加载出来的时间，这对index要求很高，如果大块文件在index太慢，则会拖慢速度</p>
 <p>在后端的index，一般100k以内最好</p>
 <p>如果是php渲染的index，不仅加载的时候会占用服务器后端资源，前端也会一片空白，非常缓慢，就如WordPress和hexo两者性能一样</p>
@@ -290,9 +293,9 @@
 &lt;script src=&quot;xxxxx&quot;&gt;&lt;/script&gt;
 &lt;link href=&quot;xxx.css&quot; rel=&quot;stylesheet&quot;/&gt;
 &lt;script&gt;
-$(document).ready(function(){
+$(document).ready(function()&#123;
 $(&#39;#text&#39;).html(&#39;我永远喜欢薇尔莉特&#39;)
-})
+&#125;)
 &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
@@ -309,8 +312,9 @@ $(&#39;#text&#39;).html(&#39;我永远喜欢薇尔莉特&#39;)
 
 &lt;/div&gt;
 &lt;/body&gt;
-</code></pre><p>他的加载顺序如下：</p>
-<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1928716/45dc0d349b47b5094b109f32488ce055.png" alt></p>
+</code></pre>
+<p>他的加载顺序如下：</p>
+<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1928716/45dc0d349b47b5094b109f32488ce055.png"></p>
 <p>当我们打开页面时，先加载了header最顶端的Script，同时CSS异步加载</p>
 <p>当JavaScript加载完成时开始加载DOM，同时CSS继续渲染</p>
 <p>DOM的加载也是从上到下，先到最大的div，再依次加载</p>
@@ -318,20 +322,21 @@ $(&#39;#text&#39;).html(&#39;我永远喜欢薇尔莉特&#39;)
 <p>LCP不记录后面资源的加载，所以这一步video对LCP性能影响不大，影响的是img，因为img需要显示出图片才算加载完框架了，而video则是根据用户设置的宽高就算加载完</p>
 <p>到这里整个页面已经出来了</p>
 <p>$(document).ready()方法也开始执行，H1开始渲染出内容<strong>“我永远喜欢薇尔莉特”</strong></p>
-<p>视频和图片在这里占据大量的资源，如果不是在最头部或者很重要的话，建议加上 preload=”none” 属性，等待用户手动操作再加载，这样就不会占用其他资源加载的时间了</p>
+<p>视频和图片在这里占据大量的资源，如果不是在最头部或者很重要的话，建议加上 preload&#x3D;”none” 属性，等待用户手动操作再加载，这样就不会占用其他资源加载的时间了</p>
 <p>JavaScript代码，如果是jQuery这类要在页面没加载前执行的，可以放在头部；如果是用户触发才执行或者是插件的话，建议放在body外面，先加载完dom再加载脚本，减少dom渲染时间</p>
 <p>同样地，因为每次加载都要请求一遍，所以这些小资源尽量做成一个bundle，即一堆js写在一个js里面，不然每次都需要请求请求请求，占据大量时间</p>
 <p>很多很多的小图片，也建议像上面的方法进行处理，变成一张大图，后续通过background位置去调整要显示的地方</p>
 <h2 id="3-渲染性能"><a href="#3-渲染性能" class="headerlink" title="3.渲染性能"></a>3.渲染性能</h2><p>后续用户会点击视频，点击的时候就会触发加载，互动事件启动</p>
 <p>如果是JavaScript在计算的，由于JavaScript原生异步，所以只按照时长最长的事件计算时间</p>
 <p>同步部分继续计时（延迟操作setTimeout或者计时器setInterval除外）</p>
-<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1928716/dcb3b77eb12533173a2d772449a8f9e6.png" alt></p>
+<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1928716/dcb3b77eb12533173a2d772449a8f9e6.png"></p>
 <h2 id="少用PHP等占大内存的脚本渲染大的html页面，会造成资源浪费"><a href="#少用PHP等占大内存的脚本渲染大的html页面，会造成资源浪费" class="headerlink" title="少用PHP等占大内存的脚本渲染大的html页面，会造成资源浪费"></a>少用PHP等占大内存的脚本渲染大的html页面，会造成资源浪费</h2><p>能纯前端尽量纯前端，减少ajax造成的耗时</p>
 <p>媒体大文件，无必要建议不预加载</p>
 <h2 id="4-适当利用缓存"><a href="#4-适当利用缓存" class="headerlink" title="4.适当利用缓存"></a>4.适当利用缓存</h2><p>为浏览器设置足够合适的缓存</p>
 <p>html建议2小时，css，视频等不常更新的资源建议设置5天，这样用户重复加载的时候就不会从头开始慢慢缓存，</p>
 <pre><code>&lt;meta http-equiv=&quot;Cache-Control&quot; content=&quot;max-age=7200&quot; /&gt;
-</code></pre><h1 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h1><p>做好以上这些，可以大大提升前端性能，本网站</p>
+</code></pre>
+<h1 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h1><p>做好以上这些，可以大大提升前端性能，本网站</p>
 <p>优化前网络：腾讯云对象存储-中国香港直连  南方48ms  北方100ms</p>
 <p>优化后网络：腾讯云对象存储-中国香港，俄罗斯，新加坡  20ms-80ms</p>
 <p>优化前LCP：8000ms</p>
@@ -479,8 +484,8 @@ $(&#39;#text&#39;).html(&#39;我永远喜欢薇尔莉特&#39;)
   <div class="site-info">
     <div class="footertext">
       <div class="img-preload">
-        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
-        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+        <img src="https://fastly.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://fastly.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
       </div>
       <p style="color: #666666;">&copy 2020 Ar-Sr-Na. All right reserved</p>
     </div>
@@ -531,7 +536,7 @@ $(&#39;#text&#39;).html(&#39;我永远喜欢薇尔莉特&#39;)
 
 <!-- <script src="/js/tocbot.js"></script> -->
 <script type="text/javascript" src="/js/lib.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 <script type="text/javascript" src="/js/InsightSearch.js"></script>
 <script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
 <script type="text/javascript" src="/js/zoom.min.js"></script>
@@ -670,10 +675,10 @@ $(document).ready(function() {
   <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
 </div>
 <button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://fastly.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 <!-- require MetingJS -->
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 <style>
   .aplayer .aplayer-lrc {
     height: 35px;

@@ -10,8 +10,8 @@
   
   <meta http-equiv="x-dns-prefetch-control" content="on">
   <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all"> -->
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.css">
+  <link rel="dns-prefetch" href="https://fastly.jsdelivr.net">
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.css">
   <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
   <link rel="stylesheet" href="/css/lib.min.css" media="all">
   <link rel="stylesheet" href="/css/font.css" media="all">
@@ -36,14 +36,14 @@
   mashiro_option.qzone_autocomplete = false;
   mashiro_option.site_name = "Ar-Sr-Na博客站";
   mashiro_option.author_name = "博客站";
-  mashiro_option.site_url = "https://www.arsrna.ltd";
+  mashiro_option.site_url = "https://b.arsrna.cn";
   mashiro_option.v_appId = "bYBEppifUgTsjjChokFXJefz-gzGzoHsz";
   mashiro_option.v_appKey = "2eq935REyPu1yFkOS5UzRHNJ";
   mashiro_option.mathjax = "0";
   mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
   mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
 
-  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.jsdelivr_css_src = "https://fastly.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
   // mashiro_option.float_player_on = true;
 
   /*End of Initial Variables*/
@@ -74,7 +74,7 @@
   <figure id="centerbg" class="centerbg">
     <div class="focusinfo no-select">
       <div class="header-tou">
-        <a href="https://www.arsrna.ltd">
+        <a href="https://b.arsrna.cn">
           <img src="https://res.arsrna.cn/icon2.jpg">
         </a>
       </div>
@@ -82,7 +82,7 @@
         <p>女装只有cos90°次和tan90°次</p>
         <div class="top-social_v2">
           <li id="bg-pre">
-            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+            <img class="flipx" src="https://fastly.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
           </li>
           
             
@@ -104,7 +104,7 @@
             
           
           <li id="bg-next">
-            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+            <img src="https://fastly.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
           </li>
         </div>
       </div>
@@ -251,53 +251,73 @@
         	<!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <p>节目编号：08-1202S/08-1203R</p>
+          <p>节目编号：08-1202S&#x2F;08-1203R</p>
 <p>切记请勿用于违法用途，一切后果与作者无关！请尊重原作者著作权，除学习外禁止未经同意随意抓取数据，禁止应用于商业化行为！</p>
-<p><img src="https://res.arsrna.cn/blogs/08-1202S-08-1203R/lovi5rlpmf.jpg" alt></p>
+<p><img src="https://res.arsrna.cn/blogs/08-1202S-08-1203R/lovi5rlpmf.jpg"></p>
 <hr>
-<h1 id="原理架构分析"><a href="#原理架构分析" class="headerlink" title="原理架构分析"></a>原理架构分析</h1><p>众所周知网页渲染出来还是html，而html都是由一部分一部分的标签组成的，对于表格，图库这类网站来说，这一部分和一部分是相似的结构，比如<tr><td>，<div class="xxx">，通过class，id，tagName的规律，不难找到相似元素，本期就以壁纸站为例：</div></td></tr></p>
-<p><img src="https://res.arsrna.cn/blogs/08-1202S-08-1203R/ky190sc2fk.png" alt></p>
+<h1 id="原理架构分析"><a href="#原理架构分析" class="headerlink" title="原理架构分析"></a>原理架构分析</h1><p>众所周知网页渲染出来还是html，而html都是由一部分一部分的标签组成的，对于表格，图库这类网站来说，这一部分和一部分是相似的结构，比如<tr><td>，<div class="xxx">，通过class，id，tagName的规律，不难找到相似元素，本期就以壁纸站为例：</p>
+<p><img src="https://res.arsrna.cn/blogs/08-1202S-08-1203R/ky190sc2fk.png"></p>
 <p>第一步，打开F12,开发者工具分析结构</p>
-<p><img src="https://res.arsrna.cn/blogs/08-1202S-08-1203R/kee1hww7qx.png" alt></p>
+<p><img src="https://res.arsrna.cn/blogs/08-1202S-08-1203R/kee1hww7qx.png"></p>
 <p>这一个个整齐的DIV，就是每一个图块对应的结构，他们的query选择器为’.thumb-container-big’</p>
 <p>再把元素展开看看</p>
-<p><img src="https://res.arsrna.cn/blogs/08-1202S-08-1203R/mjtnu4mik4.png" alt></p>
+<p><img src="https://res.arsrna.cn/blogs/08-1202S-08-1203R/mjtnu4mik4.png"></p>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">元素Class</th>
-<th style="text-align:left">内容</th>
+<th align="left">元素Class</th>
+<th align="left">内容</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">boxgrid</td>
-<td style="text-align:left">图片容器，放上面那张缩略图的</td>
+<tbody><tr>
+<td align="left">boxgrid</td>
+<td align="left">图片容器，放上面那张缩略图的</td>
 </tr>
 <tr>
-<td style="text-align:left">boxcaption</td>
-<td style="text-align:left">图片的一些描述，下面的描述文字</td>
+<td align="left">boxcaption</td>
+<td align="left">图片的一些描述，下面的描述文字</td>
 </tr>
-</tbody>
-</table>
-<p><img src="https://res.arsrna.cn/blogs/08-1202S-08-1203R/91p454stak.png" alt></p>
-<p><img src="https://res.arsrna.cn/blogs/08-1202S-08-1203R/wyur18v7xf.png" alt></p>
+</tbody></table>
+<p><img src="https://res.arsrna.cn/blogs/08-1202S-08-1203R/91p454stak.png"></p>
+<p><img src="https://res.arsrna.cn/blogs/08-1202S-08-1203R/wyur18v7xf.png"></p>
 <p>我们正好只要这两部分，原图和标题</p>
 <p>接下来展开boxgrid</p>
-<p><img src="https://res.arsrna.cn/blogs/08-1202S-08-1203R/w7hfd9iv9p.png" alt></p>
-<table><br>  <tr><br>    <th class="align-left">元素</th><br>    <th class="align-left">属性</th><br>    <th class="align-left">内容</th><br>  </tr><br>  <tr><br>    <td>a</td><br>    <td>href</td><br>    <td>跳转地址</td><br>  </tr><br>  <tr><br>    <td rowspan="3">picture</td><br>    <td>source</td><br>    <td rowspan="3">全都是图片源，我们要的就是这个</td><br>  </tr><br>  <tr><br>    <td>source</td><br>  </tr><br>  <tr><br>    <td>source</td><br>  </tr><br></table>
+<p><img src="https://res.arsrna.cn/blogs/08-1202S-08-1203R/w7hfd9iv9p.png"></p>
+<table>
+  <tr>
+    <th class="align-left">元素</th>
+    <th class="align-left">属性</th>
+    <th class="align-left">内容</th>
+  </tr>
+  <tr>
+    <td>a</td>
+    <td>href</td>
+    <td>跳转地址</td>
+  </tr>
+  <tr>
+    <td rowspan="3">picture</td>
+    <td>source</td>
+    <td rowspan="3">全都是图片源，我们要的就是这个</td>
+  </tr>
+  <tr>
+    <td>source</td>
+  </tr>
+  <tr>
+    <td>source</td>
+  </tr>
+</table>
 
 <p>控制台里发现最大的一张</p>
-<p><img src="https://res.arsrna.cn/blogs/08-1202S-08-1203R/m7ryazhrbc.png" alt></p>
+<p><img src="https://res.arsrna.cn/blogs/08-1202S-08-1203R/m7ryazhrbc.png"></p>
 <p>600*375显然不是我们要的分辨率，进入图片详情看看</p>
-<p><img src="https://res.arsrna.cn/blogs/08-1202S-08-1203R/9kn9cecppd.png" alt></p>
+<p><img src="https://res.arsrna.cn/blogs/08-1202S-08-1203R/9kn9cecppd.png"></p>
 <p>1920*1080的，他们的URL分别如下：</p>
-<p>缩略：533/thumbbig-533007.png</p>
-<p>原图：533/533007.png</p>
+<p>缩略：533&#x2F;thumbbig-533007.png</p>
+<p>原图：533&#x2F;533007.png</p>
 <p>多看几张，缩略图都是thumbbig-xxx.webp，原图都是xxx.png</p>
 <p>所以我们只需要替换掉thumbbig-为空，.webp为png即可</p>
 <p>或者如果我们注意到元素id正好对应图片的名称</p>
-<p><img src="https://res.arsrna.cn/blogs/08-1202S-08-1203R/hp08it29w4.png" alt></p>
+<p><img src="https://res.arsrna.cn/blogs/08-1202S-08-1203R/hp08it29w4.png"></p>
 <p>替换掉thumb_即可，但是我们就无法获取上级目录了</p>
 <p>如果要获取，就得用indexOf索引内容，太过于复杂，所以还是老老实实根据Picture里面的source属性吧</p>
 <h1 id="理论存在实践开始"><a href="#理论存在实践开始" class="headerlink" title="理论存在实践开始"></a>理论存在实践开始</h1><p>考虑到一些网站没有jquery，所以整个过程全部是原生js运行</p>
@@ -305,12 +325,12 @@
 <p>所以引入方法</p>
 <pre><code class="JavaScript">document.getElementsByClassName()
 </code></pre>
-<p><img src="https://res.arsrna.cn/blogs/08-1202S-08-1203R/c1u3l8bmv5.png" alt></p>
+<p><img src="https://res.arsrna.cn/blogs/08-1202S-08-1203R/c1u3l8bmv5.png"></p>
 <p>已经捕获到了31个元素，先用第一个元素分析</p>
 <h2 id="捕捉子元素"><a href="#捕捉子元素" class="headerlink" title="捕捉子元素"></a>捕捉子元素</h2><pre><code class="JavaScript">document.getElementsByClassName(&#39;thumb-container-big&#39;)[0].childNodes
 </code></pre>
 <p>一步一步抓下去</p>
-<p><img src="https://res.arsrna.cn/blogs/08-1202S-08-1203R/q06mry330c.png" alt></p>
+<p><img src="https://res.arsrna.cn/blogs/08-1202S-08-1203R/q06mry330c.png"></p>
 <p>PS：这里用jQuery会更方便些</p>
 <p>最后得到代码：</p>
 <pre><code class="JavaScript">document.getElementsByClassName(&#39;thumb-container-big&#39;)[0]
@@ -323,7 +343,7 @@
 <p>这时候已经获取到我们的Picture元素了</p>
 <p>只需要获取他的属性srcset就能获得缩略图地址</p>
 <p>所以我们用attributes对象获得属性：</p>
-<p><img src="https://res.arsrna.cn/blogs/08-1202S-08-1203R/cggfz46gpc.png" alt></p>
+<p><img src="https://res.arsrna.cn/blogs/08-1202S-08-1203R/cggfz46gpc.png"></p>
 <pre><code class="JavaScript">attributes[1]
 </code></pre>
 <p>正是我们想要的链接</p>
@@ -337,22 +357,22 @@
 这就是我们第一个元素捕获的方法，接下来就很简单了，把它封装为一个方法，方便调用：
 
 ````JavaScript
-function getLink(count) {
+function getLink(count) &#123;
   return(document.getElementsByClassName(&#39;thumb-container-big&#39;)[count].childNodes[1].childNodes[1].childNodes[1].childNodes[1].childNodes[1].attributes[1].textContent)
-}
+&#125;
 </code></pre>
-<p><img src="https://res.arsrna.cn/blogs/08-1202S-08-1203R/o534hccr4l.png" alt></p>
+<p><img src="https://res.arsrna.cn/blogs/08-1202S-08-1203R/o534hccr4l.png"></p>
 <h2 id="获得原图"><a href="#获得原图" class="headerlink" title="获得原图"></a>获得原图</h2><p>根据上面的分析，我们对链接进行字符串替换：</p>
 <pre><code class="JavaScript">getLink(0).replace(&#39;thumb-350-&#39;,&#39;&#39;).replace(&#39;.webp&#39;,&#39;.png&#39;)
 </code></pre>
-<p><img src="https://res.arsrna.cn/blogs/08-1202S-08-1203R/gfb7mr8vh3.png" alt></p>
+<p><img src="https://res.arsrna.cn/blogs/08-1202S-08-1203R/gfb7mr8vh3.png"></p>
 <h2 id="遍历循环"><a href="#遍历循环" class="headerlink" title="遍历循环"></a>遍历循环</h2><p>由于class的数量正好是图片数量，所以直接根据class进行遍历</p>
 <pre><code class="JavaScript">var elem = document.getElementsByClassName(&#39;thumb-container-big&#39;)
-for(i0=0;i0&lt;elem.length;i0++){
+for(i0=0;i0&lt;elem.length;i0++)&#123;
   console.log(getLink(i0).replace(&#39;thumb-350-&#39;,&#39;&#39;).replace(&#39;.webp&#39;,&#39;.png&#39;))
-}
+&#125;
 </code></pre>
-<p><img src="https://res.arsrna.cn/blogs/08-1202S-08-1203R/a9u4sqtk7k.png" alt></p>
+<p><img src="https://res.arsrna.cn/blogs/08-1202S-08-1203R/a9u4sqtk7k.png"></p>
 <p>我们的代码已经很完美，但是我不希望在控制台里输出，想要保存到文本文档怎么办？直接post到一个支持保存文件的后端即可，在这里不介绍</p>
 <p>代码运行速度非常地快，回车一瞬间就全部跑完了，可见异步执行的威力</p>
 <h1 id="技术总结"><a href="#技术总结" class="headerlink" title="技术总结"></a>技术总结</h1><p>优点：迅速，轻量，便捷</p>
@@ -496,8 +516,8 @@ for(i0=0;i0&lt;elem.length;i0++){
   <div class="site-info">
     <div class="footertext">
       <div class="img-preload">
-        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
-        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+        <img src="https://fastly.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://fastly.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
       </div>
       <p style="color: #666666;">&copy 2020 Ar-Sr-Na. All right reserved</p>
     </div>
@@ -548,7 +568,7 @@ for(i0=0;i0&lt;elem.length;i0++){
 
 <!-- <script src="/js/tocbot.js"></script> -->
 <script type="text/javascript" src="/js/lib.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 <script type="text/javascript" src="/js/InsightSearch.js"></script>
 <script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
 <script type="text/javascript" src="/js/zoom.min.js"></script>
@@ -687,10 +707,10 @@ $(document).ready(function() {
   <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
 </div>
 <button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://fastly.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 <!-- require MetingJS -->
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 <style>
   .aplayer .aplayer-lrc {
     height: 35px;

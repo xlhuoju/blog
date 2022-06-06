@@ -10,8 +10,8 @@
   
   <meta http-equiv="x-dns-prefetch-control" content="on">
   <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all"> -->
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.css">
+  <link rel="dns-prefetch" href="https://fastly.jsdelivr.net">
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.css">
   <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
   <link rel="stylesheet" href="/css/lib.min.css" media="all">
   <link rel="stylesheet" href="/css/font.css" media="all">
@@ -36,14 +36,14 @@
   mashiro_option.qzone_autocomplete = false;
   mashiro_option.site_name = "Ar-Sr-Na博客站";
   mashiro_option.author_name = "博客站";
-  mashiro_option.site_url = "https://www.arsrna.ltd";
+  mashiro_option.site_url = "https://b.arsrna.cn";
   mashiro_option.v_appId = "bYBEppifUgTsjjChokFXJefz-gzGzoHsz";
   mashiro_option.v_appKey = "2eq935REyPu1yFkOS5UzRHNJ";
   mashiro_option.mathjax = "0";
   mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
   mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
 
-  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.jsdelivr_css_src = "https://fastly.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
   // mashiro_option.float_player_on = true;
 
   /*End of Initial Variables*/
@@ -74,7 +74,7 @@
   <figure id="centerbg" class="centerbg">
     <div class="focusinfo no-select">
       <div class="header-tou">
-        <a href="https://www.arsrna.ltd">
+        <a href="https://b.arsrna.cn">
           <img src="https://res.arsrna.cn/icon2.jpg">
         </a>
       </div>
@@ -82,7 +82,7 @@
         <p>女装只有cos90°次和tan90°次</p>
         <div class="top-social_v2">
           <li id="bg-pre">
-            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+            <img class="flipx" src="https://fastly.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
           </li>
           
             
@@ -104,7 +104,7 @@
             
           
           <li id="bg-next">
-            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+            <img src="https://fastly.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
           </li>
         </div>
       </div>
@@ -253,82 +253,80 @@
         <div class="entry-content">
           <h1 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h1><p>本文介绍如何使用GPU服务器提交一个渲染作业，高效率完成blender的动画图片渲染，并导出渲染图片。具体操作步骤如下：</p>
 <h2 id="步骤1：准备环境"><a href="#步骤1：准备环境" class="headerlink" title="步骤1：准备环境"></a>步骤1：准备环境</h2><h3 id="系统环境"><a href="#系统环境" class="headerlink" title="系统环境"></a>系统环境</h3><p>blender在Windows上运行较为稳定易用，所以建议使用腾讯云的Windows Server 2019，已经预装好驱动</p>
-<p>前往blender官网安装blender <a href="https://www.blender.org/download/" target="_blank" rel="noopener">Download — blender.org</a></p>
-<p>如果您希望只渲染，我们开发了一个专门用来blender渲染的软件：ArSrNa Blender渲染助手：<a href="https://www.arsrna.cn/app/render" target="_blank" rel="noopener">https://www.arsrna.cn/app/render</a></p>
+<p>前往blender官网安装blender <a target="_blank" rel="noopener" href="https://www.blender.org/download/">Download — blender.org</a></p>
+<p>如果您希望只渲染，我们开发了一个专门用来blender渲染的软件：ArSrNa Blender渲染助手：<a target="_blank" rel="noopener" href="https://www.arsrna.cn/app/render">https://www.arsrna.cn/app/render</a></p>
 <h2 id="步骤2：准备渲染文件以及参数"><a href="#步骤2：准备渲染文件以及参数" class="headerlink" title="步骤2：准备渲染文件以及参数"></a>步骤2：准备渲染文件以及参数</h2><p>1.将渲染的文件打包为 .blend 格式的文件</p>
 <p>​</p>
-<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1976489/d6adf6fb0c699bc90d2b6c60ff0652e8.png" alt></p>
-<p>2.上传到对象存储，若无对象存储资源，请前往控制台开通 <a href="https://console.cloud.tencent.com/cos" target="_blank" rel="noopener">概览 - 对象存储 - 控制台 (tencent.com)</a></p>
-<p>操作请参考 <a href="https://cloud.tencent.com/document/product/436/13321" target="_blank" rel="noopener">对象存储 上传对象 - 控制台指南 - 文档中心 - 腾讯云 (tencent.com)</a></p>
+<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1976489/d6adf6fb0c699bc90d2b6c60ff0652e8.png"></p>
+<p>2.上传到对象存储，若无对象存储资源，请前往控制台开通 <a target="_blank" rel="noopener" href="https://console.cloud.tencent.com/cos">概览 - 对象存储 - 控制台 (tencent.com)</a></p>
+<p>操作请参考 <a target="_blank" rel="noopener" href="https://cloud.tencent.com/document/product/436/13321">对象存储 上传对象 - 控制台指南 - 文档中心 - 腾讯云 (tencent.com)</a></p>
 <p>注意，创建存储桶这一步操作记得将地域改为与CVM<strong>同地区</strong>，保证在内网传输文件，不仅省下了流量费，而且节省了服务器的上传带宽，哪怕没有开通公网IP都可以进行上下载</p>
-<h2 id="步骤3-服务器选型"><a href="#步骤3-服务器选型" class="headerlink" title="步骤3 服务器选型"></a>步骤3 服务器选型</h2><p>参考 <a href="https://cloud.tencent.com/document/product/560/63854" target="_blank" rel="noopener">GPU 云服务器 渲染型实例 - 实例类型 - 文档中心 - 腾讯云 (tencent.com)</a> 选择合适的显卡类型，避免显卡初始化失败。</p>
-<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1976489/cacabf30596d3449d628b850d79d4689.png" alt></p>
+<h2 id="步骤3-服务器选型"><a href="#步骤3-服务器选型" class="headerlink" title="步骤3 服务器选型"></a>步骤3 服务器选型</h2><p>参考 <a target="_blank" rel="noopener" href="https://cloud.tencent.com/document/product/560/63854">GPU 云服务器 渲染型实例 - 实例类型 - 文档中心 - 腾讯云 (tencent.com)</a> 选择合适的显卡类型，避免显卡初始化失败。</p>
+<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1976489/cacabf30596d3449d628b850d79d4689.png"></p>
 <p>本次测试使用的是GN7vw机型，搭载NVIDIA Tesla T4 GRID驱动</p>
-<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1976489/8c0cc48e243bdc133af54ea813a1334c.png" alt></p>
+<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1976489/8c0cc48e243bdc133af54ea813a1334c.png"></p>
 <p>​</p>
-<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1976489/1f8ac5493b4ab341a05b3b82d74d405e.png" alt></p>
-<p>如果是自己的镜像没有GRID图形驱动，将无法使用渲染OpenGL功能，请安装驱动：<a href="https://cloud.tencent.com/document/product/560/30060" target="_blank" rel="noopener">GPU 云服务器 安装 NVIDIA GRID 驱动 - 操作指南 - 文档中心 - 腾讯云 (tencent.com)</a></p>
+<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1976489/1f8ac5493b4ab341a05b3b82d74d405e.png"></p>
+<p>如果是自己的镜像没有GRID图形驱动，将无法使用渲染OpenGL功能，请安装驱动：<a target="_blank" rel="noopener" href="https://cloud.tencent.com/document/product/560/30060">GPU 云服务器 安装 NVIDIA GRID 驱动 - 操作指南 - 文档中心 - 腾讯云 (tencent.com)</a></p>
 <h1 id="服务器内操作"><a href="#服务器内操作" class="headerlink" title="服务器内操作"></a>服务器内操作</h1><h2 id="方案一：命令行渲染（稳定）"><a href="#方案一：命令行渲染（稳定）" class="headerlink" title="方案一：命令行渲染（稳定）"></a>方案一：命令行渲染（稳定）</h2><p>直接通过对象存储链接，内网下载文件</p>
-<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1976489/127f2e0fc2804717ac1c72a68afa35d2.png" alt></p>
-<p>.按照之前操作，安装好Blender <a href="https://www.blender.org/download/" target="_blank" rel="noopener">Download — blender.org</a></p>
+<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1976489/127f2e0fc2804717ac1c72a68afa35d2.png"></p>
+<p>.按照之前操作，安装好Blender <a target="_blank" rel="noopener" href="https://www.blender.org/download/">Download — blender.org</a></p>
 <p>建议使用zip安装，解压到指定位置</p>
-<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1976489/2c59c18dd2902e96df8651c7107f25d6.png" alt></p>
+<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1976489/2c59c18dd2902e96df8651c7107f25d6.png"></p>
 <p><strong>配置环境变量</strong></p>
 <p>右击此电脑，属性，高级，环境变量</p>
-<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1976489/f2beefb176b9808b0a7a47f9f5e77ef0.png" alt></p>
+<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1976489/f2beefb176b9808b0a7a47f9f5e77ef0.png"></p>
 <h3 id="重启服务器"><a href="#重启服务器" class="headerlink" title="重启服务器"></a>重启服务器</h3><p>开机后运行Windows+R键，输入CMD</p>
-<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1976489/d165002418b4d2ae0b78c15f1b94dc9e.png" alt></p>
+<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1976489/d165002418b4d2ae0b78c15f1b94dc9e.png"></p>
 <p>命令行输入</p>
 <pre><code class="js">blender
 </code></pre>
 <p>如果能够启动blender页面，证明已经成功</p>
-<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1976489/da4eb0a53e62d0b10d96e9958c0b26c0.png" alt></p>
+<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1976489/da4eb0a53e62d0b10d96e9958c0b26c0.png"></p>
 <h3 id="渲染参数设定"><a href="#渲染参数设定" class="headerlink" title="渲染参数设定"></a>渲染参数设定</h3><p>建议直接在blender里面设定好所有的参数，命令行只是确定渲染的帧数</p>
 <p>​</p>
-<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1976489/125eb85da484fc39de87409f86db9987.png" alt></p>
+<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1976489/125eb85da484fc39de87409f86db9987.png"></p>
 <p>建议将工程文件（blend）保存在好记的位置，这里以C:\test.blend为例</p>
 <h3 id="简单图像命令行"><a href="#简单图像命令行" class="headerlink" title="简单图像命令行"></a><strong>简单图像命令行</strong></h3><pre><code class="js">blender -b &quot;C:\test.blend&quot; -o frame_##### -f 2128
 </code></pre>
 <p>运行上述代码后，将会执行</p>
-<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1976489/d4d93c79df44f167403a3bdbc13910d0.png" alt></p>
+<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1976489/d4d93c79df44f167403a3bdbc13910d0.png"></p>
 <p>一段时间后，就可以在工程目录下看到输出的内容了</p>
 <p>上述代码的作用</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">内容</th>
+<th align="left">参数</th>
+<th align="left">内容</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">-b</td>
-<td style="text-align:left">静默运行（不运行GUI界面），后跟工程目录地址，如果带有空格的，要加双引号</td>
+<tbody><tr>
+<td align="left">-b</td>
+<td align="left">静默运行（不运行GUI界面），后跟工程目录地址，如果带有空格的，要加双引号</td>
 </tr>
 <tr>
-<td style="text-align:left">-o</td>
-<td style="text-align:left">输出目录及文件名，#代表帧号，一个#代表一位数，不足的会补0</td>
+<td align="left">-o</td>
+<td align="left">输出目录及文件名，#代表帧号，一个#代表一位数，不足的会补0</td>
 </tr>
 <tr>
-<td style="text-align:left">-f</td>
-<td style="text-align:left">渲染的帧号，要保证这个参数在最后面</td>
+<td align="left">-f</td>
+<td align="left">渲染的帧号，要保证这个参数在最后面</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h3 id="动画图像命令行"><a href="#动画图像命令行" class="headerlink" title="动画图像命令行"></a>动画图像命令行</h3><pre><code class="js">blender -b &quot;C:\test.blend&quot; -o &quot;/out/frame_#####&quot; -s 2128 -e 3000
 </code></pre>
-<p>将会渲染<strong>2128</strong>到<strong>3000</strong>帧，并输出到 <strong>工程目录/out/</strong> 目录下</p>
+<p>将会渲染<strong>2128</strong>到<strong>3000</strong>帧，并输出到 <strong>工程目录&#x2F;out&#x2F;</strong> 目录下</p>
 <h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>命令行没有指定的参数，都要通过工程文件来设置，否则将按照工程文件的设置进行输入</p>
 <p>例如上述代码，如果没有设置起始与结束帧，将会按照工程文件里的设置进行输出</p>
-<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1976489/3044462353304258aa12fd2b4b2ec881.png" alt></p>
+<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1976489/3044462353304258aa12fd2b4b2ec881.png"></p>
 <p>​</p>
-<p>命令行更多参数请查阅 <a href="https://docs.blender.org/manual/zh-hans/dev/advanced/command_line/render.html" target="_blank" rel="noopener">命令行渲染 — Blender Manual</a></p>
-<h2 id="方案2：命令行渲染助手（简单操作）"><a href="#方案2：命令行渲染助手（简单操作）" class="headerlink" title="方案2：命令行渲染助手（简单操作）"></a>方案2：命令行渲染助手（简单操作）</h2><p>在<a href="https://www.arsrna.cn/app/render" target="_blank" rel="noopener">https://www.arsrna.cn/app/render</a> 下载完软件之后，解压打开</p>
+<p>命令行更多参数请查阅 <a target="_blank" rel="noopener" href="https://docs.blender.org/manual/zh-hans/dev/advanced/command_line/render.html">命令行渲染 — Blender Manual</a></p>
+<h2 id="方案2：命令行渲染助手（简单操作）"><a href="#方案2：命令行渲染助手（简单操作）" class="headerlink" title="方案2：命令行渲染助手（简单操作）"></a>方案2：命令行渲染助手（简单操作）</h2><p>在<a target="_blank" rel="noopener" href="https://www.arsrna.cn/app/render">https://www.arsrna.cn/app/render</a> 下载完软件之后，解压打开</p>
 <p>按照提示运行即可</p>
-<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1976489/e13d1a95ec6de3fe556c856d4eead199.png" alt></p>
+<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1976489/e13d1a95ec6de3fe556c856d4eead199.png"></p>
 <h2 id="方案3：blender直接渲染（纯原生）"><a href="#方案3：blender直接渲染（纯原生）" class="headerlink" title="方案3：blender直接渲染（纯原生）"></a>方案3：blender直接渲染（纯原生）</h2><p>设置好所有参数之后，直接在工具栏-渲染-渲染图像（或者渲染动画）</p>
 <p>​</p>
-<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1976489/5dc5a6f2a641668ed58a5866fb6bb10b.png" alt></p>
+<p><img src="https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/1976489/5dc5a6f2a641668ed58a5866fb6bb10b.png"></p>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><h2 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h2><p>腾讯云GPU服务器提供了强大的处理性能，云端的高可用性，以及提供了GRID图型驱动license，与本地相比，省去了申请GRID License的时间以及费用</p>
 <p>经过本人的测试，80G的内存渲染1整天，blender没有出现闪退的情况，即使出现紧急情况，也可以使用手机远程桌面修复问题，本地如果没有搭建好远程桌面环境，很难解决突发情况</p>
 <p>云端可以随时切换配置，如果配置不够可以随意升级，而本地无法弹性无缝切换，业务会中断</p>
@@ -458,8 +456,8 @@
   <div class="site-info">
     <div class="footertext">
       <div class="img-preload">
-        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
-        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+        <img src="https://fastly.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://fastly.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
       </div>
       <p style="color: #666666;">&copy 2020 Ar-Sr-Na. All right reserved</p>
     </div>
@@ -510,7 +508,7 @@
 
 <!-- <script src="/js/tocbot.js"></script> -->
 <script type="text/javascript" src="/js/lib.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 <script type="text/javascript" src="/js/InsightSearch.js"></script>
 <script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
 <script type="text/javascript" src="/js/zoom.min.js"></script>
@@ -649,10 +647,10 @@ $(document).ready(function() {
   <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
 </div>
 <button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://fastly.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 <!-- require MetingJS -->
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 <style>
   .aplayer .aplayer-lrc {
     height: 35px;
