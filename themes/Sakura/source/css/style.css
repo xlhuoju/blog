@@ -1353,8 +1353,10 @@ a:hover,a:active {
 .yya {
     position:fixed;
     left:0;
-    background:rgba(255,255,255,.95);
-    box-shadow:0 1px 40px -8px rgba(0,0,0,.5)
+    background:rgba(255,255,255,.5);
+    box-shadow:0 1px 40px -8px rgba(0,0,0,.5);
+    backdrop-filter: blur(10px) saturate(1.5);
+    -webkit-backdrop-filter: blur(10px) saturate(1.2);
 }
 .gizle {
     top:-100px;
@@ -1362,7 +1364,7 @@ a:hover,a:active {
     z-index:9999
 }
 .site-header:hover {
-    background-color:#fff
+    background-color:rgba(255, 255, 255, 0.8);
 }
 .sabit {
     top:0;

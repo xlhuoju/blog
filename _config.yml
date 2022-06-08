@@ -93,3 +93,26 @@ sitemap:
   path: sitemap.xml
 baidusitemap:
   path: baidusitemap.xml
+
+# hexo-admin authentification
+admin:
+  username: ArSrNa
+  password_hash: $2a$10$OK1SWtkCTEvCRvRwiAmrAOnK/TrydXmLDsBPsv86tazYLub8f0S4q
+  secret: poweredByArSrNaRenderInfinity
+
+metadata:
+  avatar: https://res.arsrna.cn/icon2.jpg
+  authorLink: www.arsrna.cn
+  authorAbout: 突破计算边界，构筑数字视界，www.arsrna.cn
+  authorDesc: 突破计算边界，构筑数字视界，www.arsrna.cn
+  categories: 技术
+  comments: true
+  description: 
+  photos: 
+
+
+deploy:
+- type: git
+  repo: https://e.coding.net/arsrna/website-mainsite/blogFrontend.git
+- type: git
+  repo: https://github.com/ArSrNa/hexo.git

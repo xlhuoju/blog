@@ -45,11 +45,6 @@ links:
       name: 是UMR呐的可可爱爱岛
       desc: 学习、科研、数码、医药内容分享～
 
-    - url: https://echeverra.cn/
-      img: https://cdn.jsdelivr.net/gh/echeverra/img@main/resource/thmub.jpg
-      name: echeverra
-      desc: Let`s go, together.
-
     - url: https://choubaguai.net/
       img: 
       name: 丑八怪
