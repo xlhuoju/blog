@@ -120,5 +120,5 @@ QQ:2459405337
 
 本站头像来源为 cravatar.cn ，您的邮箱会被md5加密后传入 cravatar.cn 返回头像
 
-此致,
+此致
 Ar-Sr-Na
