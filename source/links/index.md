@@ -19,14 +19,14 @@ links:
       img: https://www.arsrna.cn/elec/logo.png
       name: Ar-Sr-Na 电子
       desc: We shape passionate of every electron
-      
+    
     - url: https://l.arsrna.cn
       img: https://cdn.jsdelivr.net/gh/ArSrNa/CDN/linkv_img/cop/arsrna.webp
       name: Ar-Sr-Na 学习中心
       desc: 突破计算边界，构筑数字视界
 
 
-    
+  
   - group: 来自博客站的互链
     desc: 欢迎交换友链 ꉂ(ˊᗜˋ)
     items:
@@ -50,22 +50,10 @@ links:
       name: 丑八怪
       desc: 云原生技术小栈
 
-    - url: https://blog.luorogers.com/
-      img: https://arsrna.coding.net/p/website-mainsite/d/blog-images/git/raw/master/linkHeads/luorogers.png
-      name: Rogers
-      desc: この素晴らしい世界に祝福を！
 
-
-      
+    
   - group: 请及时更改
     desc: 按照邮件建议进行更改
     items:
     
-    - url: https://www.yamatu.top/
-      img: https://pans.yamatu.top/api/v3/file/get/2/QQ%E5%9B%BE%E7%89%8720210819082501.jpg?sign=i-N035OwZi427mfIGLeNDc0JdZgyriPEK3G6t1IxOVI%3D%3A0
-      name: yamatublog
-      desc: 萌新不是大佬
-
-
-      
 ---
