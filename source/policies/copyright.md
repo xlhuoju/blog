@@ -6,7 +6,7 @@ keywords:
 description:
 photos: https://www.arsrna.cn/images/DSC08095_cop.jpg
 ---
-*版本：2022-7-7*
+*版本：2022-9-9*
 
 # 1.为什么要执行该协议？
 
@@ -18,7 +18,7 @@ photos: https://www.arsrna.cn/images/DSC08095_cop.jpg
 6. 本网站开放评论，评论内容不代表作者或本站的观点，您所发表的任何言论带来的后果由您本人自负
 7. 在征得本网站，以及作者同意的情况下，本网站的作品允许非盈利性引用，并请注明出处：“作者：____转载自____”字样，以尊重作者的劳动成果。版权归原作/译者所有。未经允许，严禁转载。对非法转载者，本站和作者保留采用法律手段追究的权利。
 8. 本站之声明以及其修改权、更新权及最终解释权均属原站长所有
-9. 本站部分资源拥有著作权，详情可到 [https://www.arsrna.cn/copyrights/](https://www.arsrna.cn/copyrights/) 查看具有著作权的作品，若您侵犯了本站特定作品作者的权益，本站站长将采取法律手段维护权益。
+9. 本站部分资源拥有著作权，下文查看具有著作权的作品，若您侵犯了本站特定作品作者的权益，本站站长将采取法律手段维护权益。
 10. 您若需要本站部分版权权益的，请联系站长 [https://www.arsrna.cn/communication/]([https://www.arsrna.cn/communication/](https://www.arsrna.cn/copyrights/)) 签订相关协议并按要求完成。
 11. 以上声明的解释权归本站站长所有。
 
@@ -31,14 +31,24 @@ photos: https://www.arsrna.cn/images/DSC08095_cop.jpg
 3. 本站开源项目的代码按照对应开源协议进行，目前以GPL3.0为主，协议请到对应项目查看LICENSE
 4. 本站部分视频与图文资源愿意以共享的方式公开，遵守CC BY-NC-SA 4.0的协议，详细请看下文 **CC协议内容**
 5. 本站截止至本文版本起，共有 1 件作品登记了著作权。
-6. 本站截止至本文版本起，共有 0 份代码登记了软件著作权。
+6. 本站截止至本文版本起，共有 1 份代码登记了软件著作权。
 
 ## 2.2 本站已登记著作权的作品
 
-### 2.2.1 ArSrNa 高性能计算图标
+### 2.2.1 美术作品
+
+#### ArSrNa 高性能计算图标
 
 ![ArSrNa高性能计算图标](https://www.arsrna.cn/elec/RILogo.jpg)
-登记号：[鲁作登字-2022-F-00782000](http://bqdengji.com/index.php/index/index/info/id/5155)
+登记号：鲁作登字-2022-F-00782000
+
+### 2.2.2 计算机软件
+
+#### Ar-Sr-Na Blender 单机渲染软件 V1.0
+
+登记号：[2022SR1349176](https://register.ccopyright.com.cn/publicInquiry.html?type=softList&registerNumber=2022SR1349176&keyWord=Ar-Sr-Na%20Blender%20%E5%8D%95%E6%9C%BA%E6%B8%B2%E6%9F%93%E8%BD%AF%E4%BB%B6&publicityType=ALL&registerDateType=ALL)
+
+
 
 ## 2.3 CC协议内容：
 
@@ -71,7 +81,6 @@ photos: https://www.arsrna.cn/images/DSC08095_cop.jpg
 第三十四条、图书出版者经作者许可，可以对作品修改、删节。报社、期刊社可以对作品作文字性修改、删节。对内容的修改，应当经作者许可。
 
 第三十五条、出版改编、翻译、注释、整理、汇编已有作品而产生的作品，应当取得改编、翻译、注释、整理、汇编作品的著作权人和原作品的著作权人许可，并支付报酬。
-
 
 此致
 Ar-Sr-Na
