@@ -11,9 +11,8 @@ date: 2020-08-21 21:35:14
 tags:
 keywords: 某科学的超电磁炮,Levelupper,幻想御手
 description:
-photos: 'https://res.arsrna.cn/blogs/levelupper/hdpic.jpg'
+index_img: 'https://res.arsrna.cn/blogs/levelupper/hdpic.jpg'
 ---
-
 ## BGM版
 
 <audio id="audio" controls="" src="https://res.arsrna.cn/audio/levelupper/Level_Upper_(BGM).wav"></audio>

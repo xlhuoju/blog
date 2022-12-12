@@ -6,7 +6,7 @@
   <link href="https://b.arsrna.cn/atom.xml" rel="self"/>
   
   <link href="https://b.arsrna.cn/"/>
-  <updated>2022-06-08T04:14:29.935Z</updated>
+  <updated>2022-12-12T14:12:29.731Z</updated>
   <id>https://b.arsrna.cn/</id>
   
   <author>
@@ -17,37 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>【DNS 解析】使用DNSPOD实现动态公网解析（DDNS）</title>
-    <link href="https://b.arsrna.cn/posts/2008264/"/>
-    <id>https://b.arsrna.cn/posts/2008264/</id>
-    <published>2022-06-08T03:23:00.000Z</published>
-    <updated>2022-06-08T04:14:29.935Z</updated>
+    <title>COS+CVM+CDN 实现低成本高效率往返传输数据</title>
+    <link href="https://b.arsrna.cn/posts/2066053/"/>
+    <id>https://b.arsrna.cn/posts/2066053/</id>
+    <published>2022-12-12T14:03:33.000Z</published>
+    <updated>2022-12-12T14:12:29.731Z</updated>
     
     
     <summary type="html">家里或者公司分配了一个公网IP，但它每过1周就变了，如果我要用它远程桌面，意味着一周就要改一次IP，记一个新的IP，非常复杂，该如何用一个固定的地址来替代这些变化的IP并且实现定时自动替换呢？</summary>
     
     
     
-    <category term="技术" scheme="https://b.arsrna.cn/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="CDN,COS,CVM,传输,成本优化" scheme="https://b.arsrna.cn/tags/CDN-COS-CVM-%E4%BC%A0%E8%BE%93-%E6%88%90%E6%9C%AC%E4%BC%98%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【DNS 解析】使用DNSPOD实现动态公网解析（DDNS）</title>
+    <link href="https://b.arsrna.cn/posts/2008264/"/>
+    <id>https://b.arsrna.cn/posts/2008264/</id>
+    <published>2022-06-08T03:23:00.000Z</published>
+    <updated>2022-12-12T14:05:36.593Z</updated>
     
     
-    <category term="我永远喜欢布洛妮娅" scheme="https://b.arsrna.cn/tags/%E6%88%91%E6%B0%B8%E8%BF%9C%E5%96%9C%E6%AC%A2%E5%B8%83%E6%B4%9B%E5%A6%AE%E5%A8%85/"/>
+    <summary type="html">家里或者公司分配了一个公网IP，但它每过1周就变了，如果我要用它远程桌面，意味着一周就要改一次IP，记一个新的IP，非常复杂，该如何用一个固定的地址来替代这些变化的IP并且实现定时自动替换呢？</summary>
     
-    <category term="DNS 解析" scheme="https://b.arsrna.cn/tags/DNS-%E8%A7%A3%E6%9E%90/"/>
     
-    <category term="Node.js" scheme="https://b.arsrna.cn/tags/Node-js/"/>
     
-    <category term="JavaScript" scheme="https://b.arsrna.cn/tags/JavaScript/"/>
     
-    <category term="DDNS" scheme="https://b.arsrna.cn/tags/DDNS/"/>
-    
-    <category term="动态DNS" scheme="https://b.arsrna.cn/tags/%E5%8A%A8%E6%80%81DNS/"/>
-    
-    <category term="编程" scheme="https://b.arsrna.cn/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-    <category term="公网" scheme="https://b.arsrna.cn/tags/%E5%85%AC%E7%BD%91/"/>
-    
-    <category term="DNSPod" scheme="https://b.arsrna.cn/tags/DNSPod/"/>
+    <category term="DNS 解析,Node.js,JavaScript,我永远喜欢布洛妮娅,DDNS,动态DNS,编程,公网,DNSPod,categories:,技术" scheme="https://b.arsrna.cn/tags/DNS-%E8%A7%A3%E6%9E%90-Node-js-JavaScript-%E6%88%91%E6%B0%B8%E8%BF%9C%E5%96%9C%E6%AC%A2%E5%B8%83%E6%B4%9B%E5%A6%AE%E5%A8%85-DDNS-%E5%8A%A8%E6%80%81DNS-%E7%BC%96%E7%A8%8B-%E5%85%AC%E7%BD%91-DNSPod-categories-%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
@@ -56,31 +55,17 @@
     <link href="https://b.arsrna.cn/posts/2011313/"/>
     <id>https://b.arsrna.cn/posts/2011313/</id>
     <published>2022-06-08T03:16:00.000Z</published>
-    <updated>2022-06-08T04:13:41.657Z</updated>
+    <updated>2022-12-12T14:05:08.500Z</updated>
     
     
-    <summary type="html">本文介绍如何使用GPU服务器，使用ESRGAN完成图像放大工作</summary>
+    <summary type="html">本文介绍如何使用GPU服务器，使用ESRGAN完成图像放大作</summary>
     
     
     
     <category term="技术" scheme="https://b.arsrna.cn/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="AI " scheme="https://b.arsrna.cn/tags/AI/"/>
-    
-    <category term="人工智能" scheme="https://b.arsrna.cn/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
-    
-    <category term="GPU服务器" scheme="https://b.arsrna.cn/tags/GPU%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-    <category term="渲染" scheme="https://b.arsrna.cn/tags/%E6%B8%B2%E6%9F%93/"/>
-    
-    <category term="图像放大" scheme="https://b.arsrna.cn/tags/%E5%9B%BE%E5%83%8F%E6%94%BE%E5%A4%A7/"/>
-    
-    <category term="加速" scheme="https://b.arsrna.cn/tags/%E5%8A%A0%E9%80%9F/"/>
-    
-    <category term="分布式" scheme="https://b.arsrna.cn/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
-    
-    <category term="我永远喜欢布洛妮娅" scheme="https://b.arsrna.cn/tags/%E6%88%91%E6%B0%B8%E8%BF%9C%E5%96%9C%E6%AC%A2%E5%B8%83%E6%B4%9B%E5%A6%AE%E5%A8%85/"/>
+    <category term="AI,人工智能,GPU服务器,渲染,图像放大,加速,分布式,我永远喜欢布洛妮娅" scheme="https://b.arsrna.cn/tags/AI-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-GPU%E6%9C%8D%E5%8A%A1%E5%99%A8-%E6%B8%B2%E6%9F%93-%E5%9B%BE%E5%83%8F%E6%94%BE%E5%A4%A7-%E5%8A%A0%E9%80%9F-%E5%88%86%E5%B8%83%E5%BC%8F-%E6%88%91%E6%B0%B8%E8%BF%9C%E5%96%9C%E6%AC%A2%E5%B8%83%E6%B4%9B%E5%A6%AE%E5%A8%85/"/>
     
   </entry>
   
@@ -89,16 +74,10 @@
     <link href="https://b.arsrna.cn/posts/1976489/"/>
     <id>https://b.arsrna.cn/posts/1976489/</id>
     <published>2022-04-10T08:44:00.000Z</published>
-    <updated>2022-05-02T06:52:16.123Z</updated>
+    <updated>2022-12-12T14:05:48.728Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;快速开始&quot;&gt;&lt;a href=&quot;#快速开始&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+    <summary type="html">https://res.arsrna.cn/blog-images/1976489/hdpic.png</summary>
     
     
     
@@ -114,7 +93,7 @@
     <link href="https://b.arsrna.cn/posts/1972305/"/>
     <id>https://b.arsrna.cn/posts/1972305/</id>
     <published>2022-04-04T07:20:00.000Z</published>
-    <updated>2022-05-02T06:56:10.684Z</updated>
+    <updated>2022-12-12T14:06:03.196Z</updated>
     
     
     <summary type="html">摄像机自动对焦不准确，怎么解决？</summary>
@@ -133,7 +112,7 @@
     <link href="https://b.arsrna.cn/posts/1961325/"/>
     <id>https://b.arsrna.cn/posts/1961325/</id>
     <published>2022-03-23T16:00:00.000Z</published>
-    <updated>2022-05-02T07:05:58.033Z</updated>
+    <updated>2022-12-12T14:06:16.191Z</updated>
     
     
     <summary type="html">业务量的不断扩大，导致对象存储的存储空间以及流量迅速增大，尤其是图片业务，有什么办法大幅度减小图片体积呢？</summary>
@@ -152,7 +131,7 @@
     <link href="https://b.arsrna.cn/posts/[08-1202-08-1203]D/"/>
     <id>https://b.arsrna.cn/posts/[08-1202-08-1203]D/</id>
     <published>2022-01-31T16:00:00.000Z</published>
-    <updated>2022-05-02T07:08:18.100Z</updated>
+    <updated>2022-12-12T12:07:00.202Z</updated>
     
     
       
@@ -177,7 +156,7 @@
     <link href="https://b.arsrna.cn/posts/1928176/"/>
     <id>https://b.arsrna.cn/posts/1928176/</id>
     <published>2022-01-03T08:51:00.000Z</published>
-    <updated>2022-05-02T07:01:03.540Z</updated>
+    <updated>2022-12-12T14:06:27.906Z</updated>
     
     
     <summary type="html">摄像机自动对焦不准确，怎么解决？</summary>
@@ -196,7 +175,7 @@
     <link href="https://b.arsrna.cn/posts/08-1202S-08-1203R/"/>
     <id>https://b.arsrna.cn/posts/08-1202S-08-1203R/</id>
     <published>2021-10-04T07:20:23.000Z</published>
-    <updated>2022-04-05T04:35:31.074Z</updated>
+    <updated>2022-12-12T12:09:52.185Z</updated>
     
     
       
@@ -221,7 +200,7 @@
     <link href="https://b.arsrna.cn/posts/announcement-202109/"/>
     <id>https://b.arsrna.cn/posts/announcement-202109/</id>
     <published>2021-09-20T09:52:10.000Z</published>
-    <updated>2022-04-05T04:35:31.087Z</updated>
+    <updated>2022-12-12T12:10:47.076Z</updated>
     
     
     <summary type="html">图文无关图文无关！！！</summary>
@@ -238,7 +217,7 @@
     <link href="https://b.arsrna.cn/posts/08-0902P-A/"/>
     <id>https://b.arsrna.cn/posts/08-0902P-A/</id>
     <published>2021-09-09T08:26:32.000Z</published>
-    <updated>2022-04-05T04:35:31.069Z</updated>
+    <updated>2022-12-12T12:09:54.452Z</updated>
     
     
     <summary type="html">2021年，PCB打样的价格越来越低，电子爱好者们狂喜，不得不提的就是EDA软件，它是设计电路板，设计原理图，仿真等功能为一体的电气工程软件，电子爱好者往往比较个性，pcb自然也会有自己的风格，一般我们往丝印层加的都是元器件编号，或者公司logo，自己的昵称，所以印刷时同一个颜色阻焊，板厂用的打印机也只有一种颜色，如果想要打印图片就惨不忍睹了，细节全丢，如何解决这个问题？</summary>
@@ -257,7 +236,7 @@
     <link href="https://b.arsrna.cn/posts/2021-4ybirth/"/>
     <id>https://b.arsrna.cn/posts/2021-4ybirth/</id>
     <published>2021-08-13T09:34:02.000Z</published>
-    <updated>2022-04-05T04:35:31.075Z</updated>
+    <updated>2022-12-12T12:09:51.535Z</updated>
     
     
     <summary type="html">2021，大半年来，我们向大家交出一份答卷</summary>
@@ -276,7 +255,7 @@
     <link href="https://b.arsrna.cn/posts/08-0902-E-LA3600/"/>
     <id>https://b.arsrna.cn/posts/08-0902-E-LA3600/</id>
     <published>2021-08-09T08:26:32.000Z</published>
-    <updated>2022-04-05T04:35:31.068Z</updated>
+    <updated>2022-12-12T12:09:55.124Z</updated>
     
     
       
@@ -302,7 +281,7 @@
     <link href="https://b.arsrna.cn/posts/0000-D-2021gk/"/>
     <id>https://b.arsrna.cn/posts/0000-D-2021gk/</id>
     <published>2021-06-06T15:05:00.000Z</published>
-    <updated>2022-04-05T04:35:31.067Z</updated>
+    <updated>2022-12-12T12:07:05.979Z</updated>
     
     
     <summary type="html">愿所有中高考学子都能无怨无悔，都能实现自己心里最大的梦想！</summary>
@@ -319,7 +298,7 @@
     <link href="https://b.arsrna.cn/posts/08-1202L-08-1203K/"/>
     <id>https://b.arsrna.cn/posts/08-1202L-08-1203K/</id>
     <published>2021-05-20T06:09:00.000Z</published>
-    <updated>2022-04-05T04:35:31.073Z</updated>
+    <updated>2022-12-12T12:09:52.725Z</updated>
     
     
       
@@ -343,7 +322,7 @@
     <link href="https://b.arsrna.cn/posts/08-1202H-08-1203G/"/>
     <id>https://b.arsrna.cn/posts/08-1202H-08-1203G/</id>
     <published>2021-03-27T16:00:00.000Z</published>
-    <updated>2022-04-05T04:35:31.072Z</updated>
+    <updated>2022-12-12T12:09:53.346Z</updated>
     
     
       
@@ -367,7 +346,7 @@
     <link href="https://b.arsrna.cn/posts/08-1202G-08-1203E/"/>
     <id>https://b.arsrna.cn/posts/08-1202G-08-1203E/</id>
     <published>2021-02-20T16:00:00.000Z</published>
-    <updated>2022-04-05T04:35:31.071Z</updated>
+    <updated>2022-12-12T12:09:53.830Z</updated>
     
     
       
@@ -392,7 +371,7 @@
     <link href="https://b.arsrna.cn/posts/[08-1202-08-1203]B/"/>
     <id>https://b.arsrna.cn/posts/[08-1202-08-1203]B/</id>
     <published>2021-02-02T05:19:00.000Z</published>
-    <updated>2022-04-05T04:35:31.083Z</updated>
+    <updated>2022-12-12T12:06:54.166Z</updated>
     
     
       
@@ -418,7 +397,7 @@
     <link href="https://b.arsrna.cn/posts/[08-1202-08-1203]A/"/>
     <id>https://b.arsrna.cn/posts/[08-1202-08-1203]A/</id>
     <published>2021-01-29T16:12:00.000Z</published>
-    <updated>2022-04-05T04:35:31.082Z</updated>
+    <updated>2022-12-12T12:06:50.457Z</updated>
     
     
       
@@ -444,7 +423,7 @@
     <link href="https://b.arsrna.cn/posts/[08-120308-010308-0300]A/"/>
     <id>https://b.arsrna.cn/posts/[08-120308-010308-0300]A/</id>
     <published>2021-01-29T11:41:00.000Z</published>
-    <updated>2022-04-05T04:35:31.086Z</updated>
+    <updated>2022-12-12T12:07:03.263Z</updated>
     
     
       
@@ -495,7 +474,7 @@
     <link href="https://b.arsrna.cn/posts/3-year-birth/"/>
     <id>https://b.arsrna.cn/posts/3-year-birth/</id>
     <published>2020-09-11T17:04:00.000Z</published>
-    <updated>2022-04-05T04:35:31.077Z</updated>
+    <updated>2022-12-12T12:09:55.717Z</updated>
     
     
       
@@ -521,7 +500,7 @@
     <link href="https://b.arsrna.cn/posts/vol024/"/>
     <id>https://b.arsrna.cn/posts/vol024/</id>
     <published>2020-08-24T09:50:11.000Z</published>
-    <updated>2022-04-05T04:35:31.108Z</updated>
+    <updated>2022-12-12T12:10:43.998Z</updated>
     
     
       
@@ -544,7 +523,7 @@
     <link href="https://b.arsrna.cn/posts/level-upper/"/>
     <id>https://b.arsrna.cn/posts/level-upper/</id>
     <published>2020-08-21T13:35:14.000Z</published>
-    <updated>2022-04-05T04:35:31.094Z</updated>
+    <updated>2022-12-12T12:10:46.310Z</updated>
     
     
       
@@ -567,7 +546,7 @@
     <link href="https://b.arsrna.cn/posts/%E8%88%AA%E5%A4%A9%E7%B2%BE%E7%A5%9E/"/>
     <id>https://b.arsrna.cn/posts/%E8%88%AA%E5%A4%A9%E7%B2%BE%E7%A5%9E/</id>
     <published>2020-08-11T05:43:14.000Z</published>
-    <updated>2022-04-05T04:35:31.122Z</updated>
+    <updated>2022-12-12T12:10:07.015Z</updated>
     
     
       
@@ -643,30 +622,6 @@
         
     <summary type="html">&lt;p&gt;Staff ONLT&lt;/p&gt;
 &lt;p&gt;var player &amp;#x3D; new DogePlayer({ container: document.getElementById(‘player’), userId: 1277, vcode:</summary>
-        
-      
-    
-    
-    
-    
-    <category term="未分类" scheme="https://b.arsrna.cn/tags/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网站不备案就是违法？一刀切掉90%的大陆站长</title>
-    <link href="https://b.arsrna.cn/posts/%E7%BD%91%E7%AB%99%E4%B8%8D%E5%A4%87%E6%A1%88%E5%B0%B1%E6%98%AF%E8%BF%9D%E6%B3%95%EF%BC%9F%E4%B8%80%E5%88%80%E5%88%87%E6%8E%8990%E7%9A%84%E5%A4%A7%E9%99%86%E7%AB%99%E9%95%BF/"/>
-    <id>https://b.arsrna.cn/posts/%E7%BD%91%E7%AB%99%E4%B8%8D%E5%A4%87%E6%A1%88%E5%B0%B1%E6%98%AF%E8%BF%9D%E6%B3%95%EF%BC%9F%E4%B8%80%E5%88%80%E5%88%87%E6%8E%8990%E7%9A%84%E5%A4%A7%E9%99%86%E7%AB%99%E9%95%BF/</id>
-    <published>2020-05-10T13:38:41.000Z</published>
-    <updated>2022-04-05T04:35:31.121Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;最近咨询我建站的越来越多，我的第一句就是：“先做好备案”，甲方：？？？&lt;/p&gt;
-&lt;p&gt;众所周知，在中华人民共和国境内提供互联网信息服务，应当依法履行ICP备案手续，只要在中国大陆内的服务器，都必须履行备案手续，才能提供web服务（*:80&amp;#x2F;443；http&amp;#x2</summary>
         
       
     

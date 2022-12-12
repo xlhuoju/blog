@@ -11,9 +11,8 @@ comments: true
 tags: 
 keywords: 通告
 description: 图文无关图文无关！！！
-photos: 'https://res.arsrna.cn/wallpaper%2FKonachan.com%20-%20326726%20aroa_(aroamoyasi)%20blush%20brown_eyes%20brown_hair%20cherry_blossoms%20close%20flowers%20original%20school_uniform%20spring(1).jpg_copwh'
+index_img: 'https://res.arsrna.cn/wallpaper%2FKonachan.com%20-%20326726%20aroa_(aroamoyasi)%20blush%20brown_eyes%20brown_hair%20cherry_blossoms%20close%20flowers%20original%20school_uniform%20spring(1).jpg_copwh'
 ---
-
 如果是2021年8月以后申请的链接可以忽略这个问题，以前的就要注意了！！！
 
 为了防盗刷流量，所以我开启了防盗链，只有我本人的域名可以进行读取，其他域名将会返回403，包括浏览器直接访问

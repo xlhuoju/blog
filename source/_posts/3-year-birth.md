@@ -11,9 +11,8 @@ date: 2020-09-12 01:04
 tags:
 keywords: 网站,建站,庆祝,周年
 description:
-photos: 'https://res.arsrna.cn/blogs/3-year-birth/DSC04844_sy.jpg'
+index_img: 'https://res.arsrna.cn/blogs/3-year-birth/DSC04844_sy.jpg'
 ---
-
 还记得当初的主页吗？
 
 ![2018](https://i.loli.net/2018/09/09/5b94a94363cc9.png)

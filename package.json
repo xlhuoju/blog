@@ -24,6 +24,7 @@
     "hexo-server": "*",
     "hexo-tag-bili": "*",
     "hexo-tag-fancybox_img": "*",
+    "hexo-theme-fluid": "^1.9.3",
     "serverless-cli": "*"
   }
 }

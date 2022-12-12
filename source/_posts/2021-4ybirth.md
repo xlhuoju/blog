@@ -11,7 +11,7 @@ categories: 技术
 tags: 总结
 keywords: 总结
 description: 2021，大半年来，我们向大家交出一份答卷
-photos: https://res.arsrna.cn/blogs/2021-4ybirth/DSC09882.JPG_copwh
+index_img: https://res.arsrna.cn/blogs/2021-4ybirth/DSC09882.JPG_copwh
 ---
 节目编号：
 

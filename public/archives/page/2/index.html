@@ -1,1404 +1,431 @@
+
+
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://www.arsrna.cn/elec/logo.ico">
+  <link rel="icon" href="https://www.arsrna.cn/elec/logo.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   
-  <title itemprop="name">archive_a | Ar-Sr-Na 博客站</title>
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Ar-Sr-Na">
+  <meta name="keywords" content="科技,互联网,漫展,业余无线电,编程,HTML,php,Ar-Sr-Na,ArSrNa,云存储,互联网+解决方案,云计算,云计算是什么,高性能云计算,GPU服务器,CPU服务器,javascript,全栈开发,blender渲染,电子,PCB,SMT">
   
-    <link rel="shortcut icon" href="https://res.arsrna.cn/icon2.jpg">
+    <meta name="description" content="突破计算边界，构筑数字视界">
+<meta property="og:type" content="website">
+<meta property="og:title" content="归档">
+<meta property="og:url" content="https://b.arsrna.cn/archives/page/2/index.html">
+<meta property="og:site_name" content="Ar-Sr-Na 博客站">
+<meta property="og:description" content="突破计算边界，构筑数字视界">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Ar-Sr-Na">
+<meta property="article:tag" content="科技,互联网,漫展,业余无线电,编程,HTML,php,Ar-Sr-Na,ArSrNa,云存储,互联网+解决方案,云计算,云计算是什么,高性能云计算,GPU服务器,CPU服务器,javascript,全栈开发,blender渲染,电子,PCB,SMT">
+<meta name="twitter:card" content="summary_large_image">
   
-  <meta http-equiv="x-dns-prefetch-control" content="on">
-  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all"> -->
-  <link rel="dns-prefetch" href="https://fastly.jsdelivr.net">
-  <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.css">
-  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
-  <link rel="stylesheet" href="/css/lib.min.css" media="all">
-  <link rel="stylesheet" href="/css/font.css" media="all">
-  <link rel="stylesheet" href="/css/insight.css" media="all">
-  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
-  <link rel="stylesheet" href="/css/zoom.css" media="all">
-  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
-<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
-" type="text/css" media="all"> -->
-  <script>
-  /*Initial Variables*/
-  var mashiro_option = new Object();
-  var mashiro_global = new Object();
-  mashiro_option.NProgressON = true;
-  /* 
-   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
-   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
-   */
-  mashiro_option.email_domain = "";
-  mashiro_option.email_name = "";
-  mashiro_option.cookie_version_control = "";
-  mashiro_option.qzone_autocomplete = false;
-  mashiro_option.site_name = "Ar-Sr-Na博客站";
-  mashiro_option.author_name = "博客站";
-  mashiro_option.site_url = "https://b.arsrna.cn";
-  mashiro_option.v_appId = "bYBEppifUgTsjjChokFXJefz-gzGzoHsz";
-  mashiro_option.v_appKey = "2eq935REyPu1yFkOS5UzRHNJ";
-  mashiro_option.mathjax = "0";
-  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
-  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>归档 | Ar-Sr-Na 博客站</title>
 
-  // mashiro_option.jsdelivr_css_src = "https://fastly.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
-  // mashiro_option.float_player_on = true;
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
-  /*End of Initial Variables*/
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"b.arsrna.cn","root":"/","version":"1.9.3","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
   </script>
-  <script type="text/javascript">
-  var bg = "https://res.arsrna.cn/%E5%B4%A9%E5%9D%8F3/8.png?imageMogr2/thumbnail/!40p/format/webp".split(",");
-  var bgindex = Math.floor(Math.random()*bg.length);
-  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
-    alert('朋友，IE浏览器未适配哦~');
-  }
-  </script>
-  <style type="text/css">
-  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
-  </style>
-  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
-  </style>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
 <meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="Ar-Sr-Na 博客站" type="application/atom+xml">
 </head>
 
-<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
-  <div class="scrollbar" id="bar">
-  </div>
-  <a href="#" class="cd-top faa-float animated"></a>
-  <section id="main-container">
-    <div class="headertop filter-dim">
-  <div id="banner_wave_1"></div>
-  <div id="banner_wave_2"></div>
-  <figure id="centerbg" class="centerbg">
-    <div class="focusinfo no-select">
-      <div class="header-tou">
-        <a href="https://b.arsrna.cn">
-          <img src="https://res.arsrna.cn/icon2.jpg">
-        </a>
-      </div>
-      <div class="header-info">
-        <p>女装只有cos90°次和tan90°次</p>
-        <div class="top-social_v2">
-          <li id="bg-pre">
-            <img class="flipx" src="https://fastly.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
-          </li>
-          
-            
-              
-                <li>
-                  <a href="https://github.com/ArSrNa" target="_blank" class="social-github" title="github">
-                    <img src="https://res.arsrna.cn/slsblog/github.png">
-                  </a>
-                </li>
-              
-            
-              
-                <li>
-                  <a href="https://www.zhihu.com/people/arsrna-87" target="_blank" class="social-github" title="zhihu">
-                    <img src="https://res.arsrna.cn/slsblog/zhihu.png">
-                  </a>
-                </li>
-              
-            
-          
-          <li id="bg-next">
-            <img src="https://fastly.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
-          </li>
-        </div>
-      </div>
-    </div>
-  </figure>
-  <div id="video-container" style="">
-    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
-    </video>
-    <div id="video-btn" class="loadvideo videolive">
-    </div>
-    <div id="video-add">
-    </div>
-    <div class="video-stu">
-    </div>
-  </div>
-  <div class="headertop-down faa-float animated" onclick="headertop_down()">
-    <span>
-      <i class="fa fa-chevron-down" aria-hidden="true">
-      </i>
-    </span>
-  </div>
-</div>
-    <div id="page" class="site wrapper">
-      <header class="site-header no-select gizle sabit" role="banner">
-  <div class="site-top">
-    <div class="site-branding">
-      <span class="site-title">
-        <span class="logolink moe-mashiro">
-          <a href="/">
-            <span class="sakurasono">Ar-Sr-Na</span>
-            <span class="shironeko">博客站</span>
-          </a>
-        </span>
-      </span>
-    </div>
-    <div class="searchbox search-form-submit">
-      <i class="iconfont js-toggle-search iconsearch icon-search">
-      </i>
-    </div>
-    <div id="show-nav" class="showNav mobile-fit">
-      <div class="line line1">
-      </div>
-      <div class="line line2">
-      </div>
-      <div class="line line3">
-      </div>
-    </div>
-    <div class="lower-cantiner">
-      <div class="lower">
-        <nav class="mobile-fit-control hide">
-          <ul id="menu-new" class="menu">
-            
-              <li>
-                <a href="/">
-                  <span class="faa-parent animated-hover">
-                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
-                    首页
-                  </span>
-                </a>
-                
-              </li>
-            
-              <li>
-                <a target="_blank" rel="noopener" href="https://www.arsrna.cn/">
-                  <span class="faa-parent animated-hover">
-                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
-                    回到主站
-                  </span>
-                </a>
-                
-              </li>
-            
-              <li>
-                <a href="/links">
-                  <span class="faa-parent animated-hover">
-                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
-                    友人帐
-                  </span>
-                </a>
-                
-              </li>
-            
-              <li>
-                <a href="/atom.xml">
-                  <span class="faa-parent animated-hover">
-                    <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
-                    RSS
-                  </span>
-                </a>
-                
-              </li>
-            
-              <li>
-                <a target="_blank" rel="noopener" href="https://www.arsrna.cn/policy/">
-                  <span class="faa-parent animated-hover">
-                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
-                    政策
-                  </span>
-                </a>
-                
-              </li>
-            
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </div>
-</header>
 
-      <div class="blank" style="padding-top: 75px;">
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>博客 | Ar-Sr-Na</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" rel="noopener" href="https://www.arsrna.cn/policy/">
+                <i class="iconfont icon-book"></i>
+                协议
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" rel="noopener" href="https://www.arsrna.cn/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" false
+     style="background: url('/res/default.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">归档</span>
+          
+        </div>
+
+        
+      </div>
+
+      
+    </div>
+  </div>
 </div>
-<div id="content" class="site-content">
-  <div id="main">
-    <header class="page-header">
-      <h1 class="cat-title">
-      归档</h1>
-      <span class="cat-des">
-        <p>
-        Archives</p>
-      </span>
-    </header>
-    <div id="main-part">
-      <article class="art">
-        <div class="art-main">
-          <div class="art-content">
-            <div id="archives">
-              <p style="text-align:right;">
-                [<span id="al_expand_collapse" style="cursor: s-resize;">
-                全部展开/收缩</span>
-              ]</p>
-              
-              
-              
-              
-              
+
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          >
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
                 
-                <h3 class="al_year">2022年</h3>
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      06月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/posts/2008264/">
-                          <span style="color:#0bf;">
-                          08日11:23:00</span>
-                          【DNS 解析】使用DNSPOD实现动态公网解析（DDNS）
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/posts/2011313/">
-                          <span style="color:#0bf;">
-                          08日11:16:00</span>
-                          【GPU服务器】图像深度学习超分辨率放大（Real-ESRGAN）
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      04月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/posts/1976489/">
-                          <span style="color:#0bf;">
-                          10日16:44:00</span>
-                          【GPU服务器】blender高性能渲染
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/posts/1972305/">
-                          <span style="color:#0bf;">
-                          04日15:20:00</span>
-                          【blender X MMD】摄像机景深对焦篇——百度都不一定找得到的问题
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      03月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/posts/1961325/">
-                          <span style="color:#0bf;">
-                          24日00:00:00</span>
-                          【对象存储COS】利用数据万象CI对影像内容空间进行优化
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      02月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/posts/%5B08-1202-08-1203%5DD/">
-                          <span style="color:#0bf;">
-                          01日00:00:00</span>
-                          春节期间部分服务SLA公告：[08-1202/08-1203]D
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      01月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/posts/1928176/">
-                          <span style="color:#0bf;">
-                          03日16:51:00</span>
-                          【腾讯云前端性能(RUM)优化大赛】针对前端的通用用户首屏体验(LCP)优化
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-                
-                <h3 class="al_year">2021年</h3>
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      10月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/posts/08-1202S-08-1203R/">
-                          <span style="color:#0bf;">
-                          04日15:20:23</span>
-                          【教程】纯原生异步特性，教你用JavaScript快速获取壁纸站
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      09月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/posts/announcement-202109/">
-                          <span style="color:#0bf;">
-                          20日17:52:10</span>
-                          关于友情链接图片无法加载的问题
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/posts/08-0902P-A/">
-                          <span style="color:#0bf;">
-                          09日16:26:32</span>
-                          【印刷的艺术】浅谈激光照排技术与电路板设计的艺术
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      08月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/posts/2021-4ybirth/">
-                          <span style="color:#0bf;">
-                          13日17:34:02</span>
-                          2021，大半年来，我们向大家交出一份答卷
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/posts/08-0902-E-LA3600/">
-                          <span style="color:#0bf;">
-                          09日16:26:32</span>
-                          #第六届立创电赛#LA3600 5段前级均衡器
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      06月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/posts/0000-D-2021gk/">
-                          <span style="color:#0bf;">
-                          06日23:05:00</span>
-                          【Ar-Sr-Na X 南宁十中】继续前行-2021高考加油！
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      05月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/posts/08-1202L-08-1203K/">
-                          <span style="color:#0bf;">
-                          20日14:09:00</span>
-                          【教程】纯前端做一个歌词显示的音乐播放器
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      03月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/posts/08-1202H-08-1203G/">
-                          <span style="color:#0bf;">
-                          28日00:00:00</span>
-                          我开发了一根进度条 [08-1202H/08-1203G]
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      02月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/posts/08-1202G-08-1203E/">
-                          <span style="color:#0bf;">
-                          21日00:00:00</span>
-                          DDoS攻击者，感谢有你
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/posts/%5B08-1202-08-1203%5DB/">
-                          <span style="color:#0bf;">
-                          02日13:19:00</span>
-                          JavaServerless Learn-基础
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      01月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/posts/%5B08-1202-08-1203%5DA/">
-                          <span style="color:#0bf;">
-                          30日00:12:00</span>
-                          关于QQ群内“被踢出本群” XML卡片深入研究
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/posts/%5B08-120308-010308-0300%5DA/">
-                          <span style="color:#0bf;">
-                          29日19:41:00</span>
-                          MMD转Blender、C4D教程- Blender插件篇
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/posts/SLA2020/">
-                          <span style="color:#0bf;">
-                          24日22:52:00</span>
-                          2020云计算项目总结-全年年度服务状态（SLA）一览
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-                
-                <h3 class="al_year">2020年</h3>
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      09月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/posts/3-year-birth/">
-                          <span style="color:#0bf;">
-                          12日01:04:00</span>
-                          建站两周年，运行三周年庆祝
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      08月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/posts/vol024/">
-                          <span style="color:#0bf;">
-                          24日17:50:11</span>
-                          Ar-Sr-Na 科普 Vol024 如何打造爆款Cos-服装篇
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/posts/level-upper/">
-                          <span style="color:#0bf;">
-                          21日21:35:14</span>
-                          level upper原音频
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/posts/%E8%88%AA%E5%A4%A9%E7%B2%BE%E7%A5%9E/">
-                          <span style="color:#0bf;">
-                          11日13:43:14</span>
-                          航天精神
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/posts/%E5%8D%9A%E5%AE%A2%E5%85%A8%E7%AB%99%E8%BF%81%E7%A7%BB%E8%87%B3Serverless%E6%9E%B6%E6%9E%84/">
-                          <span style="color:#0bf;">
-                          02日16:21:16</span>
-                          博客全站迁移至Serverless架构
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      07月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/posts/%E5%89%8D%E7%AB%AF%E4%B8%AD%E7%9A%84live2d%E4%B8%8E%E6%8A%80%E6%9C%AF/">
-                          <span style="color:#0bf;">
-                          14日22:25:13</span>
-                          前端中的Live2D与技术
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      05月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/posts/standred/">
-                          <span style="color:#0bf;">
-                          22日13:35:57</span>
-                          Ar-Sr-Na 视频制作规范-仅制作者可查看
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/posts/%E7%BD%91%E7%AB%99%E4%B8%8D%E5%A4%87%E6%A1%88%E5%B0%B1%E6%98%AF%E8%BF%9D%E6%B3%95%EF%BC%9F%E4%B8%80%E5%88%80%E5%88%87%E6%8E%8990%E7%9A%84%E5%A4%A7%E9%99%86%E7%AB%99%E9%95%BF/">
-                          <span style="color:#0bf;">
-                          10日21:38:41</span>
-                          网站不备案就是违法？一刀切掉90%的大陆站长
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/posts/2d-animate-line/">
-                          <span style="color:#0bf;">
-                          08日19:51:18</span>
-                          【动画技术】二维动画制作-选择纸上线稿还是电子线稿？
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/posts/hamr55/">
-                          <span style="color:#0bf;">
-                          05日09:22:52</span>
-                          业余无线电“五五节”全天直播
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-                
-                <h3 class="al_year">2019年</h3>
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      10月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/posts/%E7%88%B1%E5%A5%87%E8%89%BA%E7%BD%91%E7%BB%9C%E5%A4%A7%E7%94%B5%E5%BD%B1%E3%80%8A%E6%9C%A8%E9%A9%AC%E3%80%8B%E4%BC%97%E7%AD%B9%E5%95%86%E4%B8%9A%E8%AE%A1%E5%88%92/">
-                          <span style="color:#0bf;">
-                          13日00:52:45</span>
-                          爱奇艺网络大电影《木马》众筹商业计划
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      05月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/posts/%E6%91%84%E5%BD%B1%E5%B8%88%E5%BF%85%E8%AF%BB-%E4%B8%BA%E4%BB%80%E4%B9%88%E7%84%A6%E8%B7%9D%E5%A6%82%E6%AD%A4%E9%87%8D%E8%A6%81%EF%BC%9F/">
-                          <span style="color:#0bf;">
-                          27日12:36:40</span>
-                          摄影师必读——为什么焦距如此重要？
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/posts/%E5%85%B3%E4%BA%8Earri%E7%9A%84%E9%82%A3%E4%BD%8D%E7%BE%8E%E5%A5%B3isabella/">
-                          <span style="color:#0bf;">
-                          24日13:09:19</span>
-                          关于ARRI的那位美女Isabella
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/posts/%E6%96%AF%E5%9D%A6%E5%B0%BC%E5%BA%B7m1-volt%E7%B3%BB%E7%BB%9F%E7%AE%80%E4%BB%8Bsteadicam%E5%BE%AE%E7%94%B5%E5%BD%B1%E6%91%84%E5%BD%B1%E5%B8%88%E4%B8%93%E4%B8%9A%E6%8A%80%E6%9C%AF%E8%AE%BA%E5%9D%9B/">
-                          <span style="color:#0bf;">
-                          24日13:08:46</span>
-                          斯坦尼康M1-volt系统简介steadicam微电影摄影师专业技术论坛
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/posts/pr%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B032%E9%98%B2%E6%AD%A2%E5%B8%95%E9%87%91%E6%A3%AE-pr%E9%98%B2%E6%8A%96%E6%95%99%E7%A8%8B-%E7%B4%A0%E6%9D%90%E5%BD%92%E6%A1%A3/">
-                          <span style="color:#0bf;">
-                          03日10:25:35</span>
-                          [pr基础教程032]防止帕金森-Pr防抖教程  素材归档
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/posts/vlog-0012019%E5%8D%97%E5%AE%81%E6%9C%88%E9%82%AA%E5%8A%A8%E6%BC%AB%E5%B9%BF%E8%A5%BF%E8%A1%8C-%E7%B4%A0%E6%9D%90%E5%BD%92%E6%A1%A3/">
-                          <span style="color:#0bf;">
-                          02日10:57:20</span>
-                          [Vlog-001]2019南宁月邪动漫广西行  素材归档
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/posts/ar-sr-na%E5%AD%A6%E4%B9%A0%E4%B8%AD%E5%BF%83-%E5%BD%B1%E8%A7%86%E5%90%8E%E6%9C%9F%E7%AF%87%EF%BC%9A002-%E5%BC%80%E5%A7%8B%E7%AC%AC%E4%B8%80%E4%B8%AA%E9%A1%B9%E7%9B%AE/">
-                          <span style="color:#0bf;">
-                          01日17:29:02</span>
-                          Ar-Sr-Na学习中心-影视后期篇：002 开始第一个项目
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      04月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/posts/ar-sr-na%E5%AD%A6%E4%B9%A0%E4%B8%AD%E5%BF%83-%E5%BD%B1%E8%A7%86%E5%90%8E%E6%9C%9F%E7%AF%87%EF%BC%9A001-%E5%BF%85%E8%A6%81%E5%B7%A5%E5%85%B7%E5%87%86%E5%A4%87/">
-                          <span style="color:#0bf;">
-                          27日12:14:54</span>
-                          Ar-Sr-Na学习中心-影视后期篇：001 必要工具准备
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/posts/pr%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B006%E5%85%B3%E9%94%AE%E5%B8%A7%E4%BD%BF%E7%94%A8%E6%93%8D%E4%BD%9C%E6%96%B9%E6%B3%95-%E7%B4%A0%E6%9D%90%E5%BD%92%E6%A1%A3/">
-                          <span style="color:#0bf;">
-                          07日16:27:12</span>
-                          [pr入门教程006]关键帧使用操作方法   素材归档
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      03月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/posts/pr%E6%95%99%E7%A8%8B-extra-%E6%89%A9%E5%B1%95%E7%AF%87001%E7%94%BB%E8%B4%A8%E5%9F%BA%E7%A1%80-%E7%B4%A0%E6%9D%90/">
-                          <span style="color:#0bf;">
-                          30日12:03:22</span>
-                          [Pr教程 Extra.扩展篇001]画质基础  素材
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/posts/pr%E8%BF%9B%E9%98%B6%E6%95%99%E7%A8%8B004%E8%A7%86%E9%A2%91%E7%BA%BF%E7%A8%BF%E9%A3%8E%E6%A0%BC%E5%8C%96-%E7%B4%A0%E6%9D%90/">
-                          <span style="color:#0bf;">
-                          28日13:26:37</span>
-                          [pr进阶教程004]视频线稿风格化  素材
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/posts/%E5%B8%A7%E6%89%A3%E4%BA%8C%E5%80%BC%E5%8C%96%E7%B4%AB%E7%BD%97%E5%85%B0%E7%9A%84%E6%B0%B8%E6%81%92%E8%8A%B1%E5%9B%ADop/">
-                          <span style="color:#0bf;">
-                          23日15:59:04</span>
-                          [帧扣+二值化]紫罗兰的永恒花园OP
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/posts/cpu%E7%88%86%E7%82%B8%E5%B8%A7%E6%8A%A0%E4%BA%8C%E5%80%BC%E5%8C%96%E5%90%8E%E7%9A%84%E8%BE%89%E5%A4%9C%E5%A4%A7%E5%B0%8F%E5%A7%90%E6%83%B3%E8%AE%A9%E6%88%91%E5%91%8A%E7%99%BDed-%E5%88%86%E5%B8%A7/">
-                          <span style="color:#0bf;">
-                          22日22:05:10</span>
-                          [CPU爆炸帧抠]二值化后的辉夜大小姐想让我告白ED   分帧
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/posts/pr-start-1%E5%89%8D%E8%A8%80re-%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%EF%BC%8Cup%E4%B8%BB%E7%9A%84%E5%88%9D%E8%A1%B7%E4%B8%8E%E6%84%BF%E6%99%AF-%E7%B4%A0%E6%9D%90%E5%BD%92%E6%A1%A3/">
-                          <span style="color:#0bf;">
-                          16日15:48:22</span>
-                          [PR Start.1前言]Re-从零开始，up主的初衷与愿景 素材归档
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      01月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/posts/pr%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B003%E5%8F%98%E9%80%9F%EF%BC%8C%E5%80%92%E6%94%BE%E6%95%88%E6%9E%9C/">
-                          <span style="color:#0bf;">
-                          24日23:36:48</span>
-                          [pr基础教程003]变速，倒放效果
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
+
+<div class="list-group">
+  <p class="h4">共计 45 篇文章</p>
+  <hr>
+  
+  
+    
+      
+      <p class="h5">2021</p>
+    
+    <a href="/posts/08-0902P-A/" class="list-group-item list-group-item-action">
+      <time>09-09</time>
+      <div class="list-group-item-title">【印刷的艺术】浅谈激光照排技术与电路板设计的艺术</div>
+    </a>
+  
+    
+    <a href="/posts/2021-4ybirth/" class="list-group-item list-group-item-action">
+      <time>08-13</time>
+      <div class="list-group-item-title">2021，大半年来，我们向大家交出一份答卷</div>
+    </a>
+  
+    
+    <a href="/posts/08-0902-E-LA3600/" class="list-group-item list-group-item-action">
+      <time>08-09</time>
+      <div class="list-group-item-title">#第六届立创电赛#LA3600 5段前级均衡器</div>
+    </a>
+  
+    
+    <a href="/posts/0000-D-2021gk/" class="list-group-item list-group-item-action">
+      <time>06-06</time>
+      <div class="list-group-item-title">【Ar-Sr-Na X 南宁十中】继续前行-2021高考加油！</div>
+    </a>
+  
+    
+    <a href="/posts/08-1202L-08-1203K/" class="list-group-item list-group-item-action">
+      <time>05-20</time>
+      <div class="list-group-item-title">【教程】纯前端做一个歌词显示的音乐播放器</div>
+    </a>
+  
+    
+    <a href="/posts/08-1202H-08-1203G/" class="list-group-item list-group-item-action">
+      <time>03-28</time>
+      <div class="list-group-item-title">我开发了一根进度条 [08-1202H/08-1203G]</div>
+    </a>
+  
+    
+    <a href="/posts/08-1202G-08-1203E/" class="list-group-item list-group-item-action">
+      <time>02-21</time>
+      <div class="list-group-item-title">DDoS攻击者，感谢有你</div>
+    </a>
+  
+    
+    <a href="/posts/%5B08-1202-08-1203%5DB/" class="list-group-item list-group-item-action">
+      <time>02-02</time>
+      <div class="list-group-item-title">JavaServerless Learn-基础</div>
+    </a>
+  
+    
+    <a href="/posts/%5B08-1202-08-1203%5DA/" class="list-group-item list-group-item-action">
+      <time>01-30</time>
+      <div class="list-group-item-title">关于QQ群内“被踢出本群” XML卡片深入研究</div>
+    </a>
+  
+    
+    <a href="/posts/%5B08-120308-010308-0300%5DA/" class="list-group-item list-group-item-action">
+      <time>01-29</time>
+      <div class="list-group-item-title">MMD转Blender、C4D教程- Blender插件篇</div>
+    </a>
+  
+</div>
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/archives/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/#board">3</a><a class="page-number" href="/archives/page/4/#board">4</a><a class="page-number" href="/archives/page/5/#board">5</a><a class="extend next" rel="next" href="/archives/page/3/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+
+              </div>
             </div>
           </div>
         </div>
-      </article>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
     </div>
   </div>
 </div>
 
-    </div>    
-    <div class="ins-search">
-    <div class="ins-search-mask"></div>
-    <div class="ins-search-container">
-        <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
-            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
-        </div>
-        <div class="ins-section-wrapper">
-            <div class="ins-section-container"></div>
-        </div>
-    </div>
-</div>
-<script>
-(function (window) {
-    var INSIGHT_CONFIG = {
-        TRANSLATION: {
-            POSTS: '文章',
-            // PAGES: '页面',
-            CATEGORIES: '分类',
-            TAGS: '标签',
-        },
-        ROOT_URL: '/',
-        CONTENT_URL: '/content.json',
-    };
-    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
-})(window);
-</script>
-    <!-- <footer id="footer">
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
   
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2022 Ar-Sr-Na<br>
-      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    <div class="footer-content">
+       Powered/CSS by <a target="_blank" rel="noopener" href="https://www.arsrna.cn">Ar-Sr-Na</a> | Theme by <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
     </div>
-  </div>
-</footer> -->
-<footer id="colophon" class="site-footer" role="contentinfo">
-  <div class="site-info">
-    <div class="footertext">
-      <div class="img-preload">
-        <img src="https://fastly.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
-        <img src="https://fastly.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
-      </div>
-      <p style="color: #666666;">&copy 2020 Ar-Sr-Na. All right reserved</p>
-    </div>
-    <div class="footer-device">
-    <p style="font-family: 'Ubuntu', sans-serif;">
-        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo, Hosted by TencentCloud COS & Serverless Framework</a>
-        </span>
-      </p>
-    </div>
-  </div><!-- .site-info -->
-</footer>
-
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
-<script src="https://cdn-go.cn/aegis/aegis-sdk/latest/aegis.min.js"></script>
-<script>
-  const aegis = new Aegis({
-    id: 'PR8Q4VBmZvWyA3gmKO', // 上报 id
-    uin: navigator.userAgent, // 用户唯一 ID（可选）
-    reportApiSpeed: true, // 接口测速
-    reportAssetSpeed: true, // 静态资源测速
-    spa: true // spa 应用页面跳转的时候开启 pv 计算
-  });
-</script>
-
-<!-- <script src="/js/tocbot.js"></script> -->
-<script type="text/javascript" src="/js/lib.min.js"></script>
-<script src="https://fastly.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
-<script type="text/javascript" src="/js/InsightSearch.js"></script>
-<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
-<script type="text/javascript" src="/js/zoom.min.js"></script>
-<script type="text/javascript" src="/js/sakura-app.js"></script>
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
-<script src="/js/botui.js"></script>
-<!-- 不蒜子 网页计数器 -->
-<script type="text/javascript">
-/* <![CDATA[ */
-if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-  var Poi = {"pjax":"1","movies":{"url": "https://arsrnasitefr-1257609559.cos.ap-guangzhou.myqcloud.com","name":"/videos/mmd%E8%83%8C%E6%99%AFweb_x264.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
-} else {
-  var Poi = {"pjax":"1","movies":{"url": "https://arsrnasitefr-1257609559.cos.ap-guangzhou.myqcloud.com","name":"/videos/mmd%E8%83%8C%E6%99%AFweb_x264.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
-}
-/* ]]> */
-
-</script>
-<script>
-$(document).ready(function() {
-  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
-    if ($(".pattern-center").length > 0) { //有图的情况
-      tocbot.init({
-          // Where to render the table of contents.
-          tocSelector: '.toc', // 放置目录的容器
-          // Where to grab the headings to build the table of contents.
-          contentSelector: '.entry-content', // 正文内容所在
-          // Which headings to grab inside of the contentSelector element.
-          scrollSmooth: true,
-          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
-          headingsOffset: -400,
-          scrollSmoothOffset: -85
-      });
-    } else {
-      tocbot.init({
-          // Where to render the table of contents.
-          tocSelector: '.toc', // 放置目录的容器
-          // Where to grab the headings to build the table of contents.
-          contentSelector: '.entry-content', // 正文内容所在
-          // Which headings to grab inside of the contentSelector element.
-          scrollSmooth: true,
-          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
-          headingsOffset: -85,
-          scrollSmoothOffset: -85
-      });
-    }
-    var offsetTop = $('.toc').offset().top - 95;
-    window.onscroll = function() {
-      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-      if (scrollTop >= offsetTop) {
-        $('.toc').addClass('toc-fixed');
-      } else {
-        $('.toc').removeClass('toc-fixed');
-      }
-    }
-  }
-});
-</script>
-
-    <div class="openNav no-select" style="height: 50px;">
-      <div class="iconflat no-select" style="width: 50px; height: 50px;">
-        <div class="icon"></div>
-      </div>
-      <div class="site-branding search-form-submit">
-        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
-      </div>
-    </div>
-  </section>
-  <div id="mo-nav" class="">
-  <div class="m-avatar">
-    <img src="https://res.arsrna.cn/icon2.jpg">
-  </div>
-  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">Ar-Sr-Na博客站</p>
-  <p style="text-align: center; word-spacing: 20px;">
-    
-      
-        <a href="https://github.com/Ar-Sr-Na" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
-      
-        <a href="https://wpa.qq.com/msgrd?v=3&uin=2459405337&site=qq&menu=yes" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
-      
-    
-  </p>
-  <ul id="menu-new-1" class="menu">
-    
-      <li>
-        <a href="/">
-          <span class="faa-parent animated-hover">
-            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
-            首页
-          </span>
-        </a>
-        
-      </li>
-    
-      <li>
-        <a target="_blank" rel="noopener" href="https://www.arsrna.cn/">
-          <span class="faa-parent animated-hover">
-            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
-            回到主站
-          </span>
-        </a>
-        
-      </li>
-    
-      <li>
-        <a href="/links">
-          <span class="faa-parent animated-hover">
-            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
-            友人帐
-          </span>
-        </a>
-        
-      </li>
-    
-      <li>
-        <a href="/atom.xml">
-          <span class="faa-parent animated-hover">
-            <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
-            RSS
-          </span>
-        </a>
-        
-      </li>
-    
-      <li>
-        <a target="_blank" rel="noopener" href="https://www.arsrna.cn/policy/">
-          <span class="faa-parent animated-hover">
-            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
-            政策
-          </span>
-        </a>
-        
-      </li>
-    
-  </ul>
-  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+  
+  
+  
+  
 </div>
-<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
-  <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<script src="https://fastly.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-<!-- require MetingJS -->
-<script src="https://fastly.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-<style>
-  .aplayer .aplayer-lrc {
-    height: 35px;
-  }
-  .aplayer .aplayer-lrc p{
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 18px !important;
-  }
-  .aplayer .aplayer-lrc p.aplayer-lrc-current{
-    color: #FF1493;
-  }
-  .aplayer.aplayer-narrow .aplayer-body{
-    left: -66px !important;
-  }
-  .aplayer.aplayer-fixed .aplayer-lrc {
-    display: none;
-  }
-  .aplayer .aplayer-lrc.aplayer-lrc-hide {
-      display:none !important;
-  }
-  .aplayer.aplayer-fixed .lrc-show {
-    display: block;
-    background: rgba(255, 255, 255, 0.8);
-  }
-</style>
-<meting-js
 
-    id="2660651585"
+  </footer>
 
-    server="netease"
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
 
-    type="playlist"
-
-    fixed="true"
-
-    autoplay="false"
-
-    loop="all"
-
-    order="random"
-
-    preload="auto"
-
-    volume="0.7"
-
-    mutex="true"
-
-</meting-js>
-<script>
-  $(function(){
-    $('body').on('click', '.aplayer', function(){
-      if($('.aplayer-button').hasClass('aplayer-play')) {
-        $('.aplayer-lrc').removeClass('lrc-show');
-      } else {
-        $('.aplayer-lrc').addClass('lrc-show');
-      }
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
     })
-  });
-</script>
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+  
+<script src="https://cdn-go.cn/aegis/aegis-sdk/latest/aegis.min.js"></script>
+<script src="/res/index.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
 </body>
 </html>
