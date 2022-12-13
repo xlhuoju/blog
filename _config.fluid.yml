@@ -1000,6 +1000,12 @@ links:
   # Member item of page
   items:
     - {
+      link: https://wj.qq.com/s2/3677282/eb48/,
+      avatar: https://www.arsrna.cn/elec/logo.ico,
+      title: 点此申请,
+      intro: 请按要求完成网站部署，周六更新
+    }
+    - {
       link: https://www.arsrna.cn,
       avatar: https://www.arsrna.cn/elec/logo.ico,
       title: Ar-Sr-Na 主站,
@@ -1033,14 +1039,6 @@ links:
       title: 鲸一,
       intro: 希望是件美好的事，也许是世间最美好的东西，而美好的事物永不消逝!
     }
-
-    - {
-      link: https://www.shiumrna.com,
-      avatar: https://res.arsrna.cn/jsdelivr/linkv_avatar/shiumma.com.png,
-      title: 是UMR呐的可可爱爱岛,
-      intro: 学习、科研、数码、医药内容分享～
-    }
-
     - {
       link: https://choubaguai.net/,
       avatar: https://cravatar.cn/avatar/,

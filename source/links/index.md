@@ -19,7 +19,7 @@ links:
       img: https://www.arsrna.cn/elec/logo.png
       name: Ar-Sr-Na 电子
       desc: We shape passion of every electron
-    
+  
     - url: https://l.arsrna.cn
       img: https://www.arsrna.cn/elec/logo.ico
       name: Ar-Sr-Na 学习中心
@@ -28,7 +28,7 @@ links:
 
   
   - group: 来自博客站的互链
-    desc: 欢迎交换友链 ꉂ(ˊᗜˋ)
+    desc: 欢迎交换友链 ꉂ(ˊᗜˋ) <a href="https://wj.qq.com/s2/3677282/eb48/" target="_blank">点此申请</a>
     items:
     - url: https://tsukisou.ink/
       img: https://video.drblack-system.com/logo.jpg
@@ -39,11 +39,6 @@ links:
       img: https://cdn.jsdelivr.net/gh/ArSrNa/CDN/linkv_img/cop/saroin.com.webp
       name: 鲸一
       desc: 希望是件美好的事，也许是世间最美好的东西，而美好的事物永不消逝!
-
-    - url: https://www.shiumrna.com
-      img: https://res.arsrna.cn/jsdelivr/linkv_img/shiumma.com.png
-      name: 是UMR呐的可可爱爱岛
-      desc: 学习、科研、数码、医药内容分享～
 
     - url: https://choubaguai.net/
       img: 
@@ -56,9 +51,4 @@ links:
       name: 欧阳淇淇の小屋
       desc: 「大切な人と再会できる日を」
 
-    
-  - group: 请及时更改
-    desc: 按照邮件建议进行更改
-    items:
-    
 ---
