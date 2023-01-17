@@ -11,7 +11,7 @@ categories: 技术
 comments: true
 keywords: 渲染,shader,blender,原神,三渲二,NPR
 description: 快速使用Festivity的shader实现仿原神渲染。
-index_img: 'https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/u453bn69cp.png'
+index_img: 'https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/u453bn69cp.png_web'
 ---
 # 导言
 
@@ -27,31 +27,31 @@ index_img: 'https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blende
 
 若直接使用3d渲染，需要考虑场景光照是否真实，人物面部光线，全局光，光线追踪等等，同时受限于计算机动画，难以模拟真实人物的动作神态等，容易引发恐怖谷效应。
 
-![BV1qJ411n7w8](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/uxo1s4g0iq.png)
+![BV1qJ411n7w8](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/uxo1s4g0iq.png_web)
 
-![](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/zs31yhh0x5.png)
+![](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/zs31yhh0x5.png_web)
 
 如果使用三渲二效果，则减轻了很大部分的光照计算负担，画风也很容易接受
 
-![](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/0j9614jom0.png)
+![](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/0j9614jom0.png_web)
 
-![image.png](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/u453bn69cp.png)
+![image.png](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/u453bn69cp.png_web)
 
 ## 效果实例
 
 3D渲染-cycles
 
-![](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/ovppd7bphi.png)
+![](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/ovppd7bphi.png_web)
 
 Its Splash by Piotr Krynski
 
 三渲二 Ar-Sr-Na mmd
 
-![](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/lcnphgvyir.png)
+![](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/lcnphgvyir.png_web)
 
-![](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/uhb5j8lgti.png)
+![](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/uhb5j8lgti.png_web)
 
-![](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/7d34ju3be7.png)
+![](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/7d34ju3be7.png_web)
 
 三渲二具体原理，此处不再介绍，简单地说，就是无阴影，削除阴影让其看起来很像日式动画
 
@@ -89,7 +89,7 @@ Blender miHoYo Shaders：[github](https://github.com/festivize/Blender-miHoYo-Sh
 
 这是正确的FBX模型拥有的文件
 
-![](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/h4o0zr32h4.png)
+![](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/h4o0zr32h4.png_web)
 
 | 文件名         | 内容            |
 | :------------- | :-------------- |
@@ -125,67 +125,67 @@ pmx模型（自行寻找）
 
 如图所示
 
-![](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/0b1trdyc9t.png)
+![](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/0b1trdyc9t.png_web)
 
 启用插件
 
-![](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/z8tj6umqux.png)
+![](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/z8tj6umqux.png_web)
 
 ## 2.导入模型
 
 在3d视图按键盘上<**N**>，选中选项卡上的<**Genshin**>
 
-![](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/wcvapalwrv.png)
+![](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/wcvapalwrv.png_web)
 
 单击<**Set Up Character**>
 
 选择FBX及材质所在文件夹，并单击蓝色导入按钮
 
-![](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/9jo0l94l8f.png)
+![](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/9jo0l94l8f.png_web)
 
 这时候模型已经导入进来了，但是是躺着的，选中模型，在变换选项卡里面将X轴改为90
 
-![image.png](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/8ffzqithdt.png)
+![image.png](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/8ffzqithdt.png_web)
 
 ## 3.导入材质
 
 全选模型，单击Genshin选项卡里的Set Up Materials，选择上面下载的 miHoYo - Genshin Impact.blend（不建议使用Goo Engine的那个文件）
 
-![image.png](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/4eliktrmoi.png)
+![image.png](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/4eliktrmoi.png_web)
 
 提示 Imported Shader/Genshin Materials... 则完成
 
 这时候切到视图渲染，效果如图
 
-![image.png](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/glb4mm8zy0.png)
+![image.png](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/glb4mm8zy0.png_web)
 
 ## 4.设置光照材质
 
 给一个材质节点视图
 
-![image.png](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/0qha592w0e.png)
+![image.png](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/0qha592w0e.png_web)
 
 检查下对应材质节点有没有出错
 
-![image.png](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/8x7sfhfaxj.png)
+![image.png](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/8x7sfhfaxj.png_web)
 
 按照提示选择对应的贴图
 
-![image.png](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/aiy4fedi8k.png)
+![image.png](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/aiy4fedi8k.png_web)
 
 给 body，hair，face，dress都检查一下，有没有漏选贴图的
 
 来到 Ramp 节点组这里，点这里展开
 
-![image.png](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/gi5dit2bae.png)
+![image.png](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/gi5dit2bae.png_web)
 
 根据提示选上，点击这个面板里右上角箭头返回
 
-![image.png](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/i4w5f2kg1n.png)
+![image.png](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/i4w5f2kg1n.png_web)
 
 对每一个节点都这么处理
 
-![image.png](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/plq5e9mb35.png)
+![image.png](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/plq5e9mb35.png_web)
 
 改得差不多就行了，不是所有节点都必须有的，lightmap和ramp是必须要改的
 
@@ -193,25 +193,25 @@ pmx模型（自行寻找）
 
 如果直接完成的话，阴影不会跟踪人物，所以必须让 Main Light Direction 绑定骨骼
 
-![image.png](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/kq7ui45sxl.png)
+![image.png](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/kq7ui45sxl.png_web)
 
 Bone选择头部
 
-![image.png](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/j5csxg4ln1.png)
+![image.png](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/j5csxg4ln1.png_web)
 
 ## 6.查看效果
 
 渲染颜色模式改为标准，不然效果不佳
 
-![image.png](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/3yofujiio8.png)
+![image.png](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/3yofujiio8.png_web)
 
 这时，动一下 Main Light Direction 的Z轴旋转，或者姿态模式让人物动下头，效果就有了
 
-![image.png](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/tvn0ikhhdb.png)
+![image.png](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/tvn0ikhhdb.png_web)
 
-![image.png](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/o1hbzm027i.png)
+![image.png](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/o1hbzm027i.png_web)
 
-![image.png](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/5xyvydvd9k.png)
+![image.png](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/5xyvydvd9k.png_web)
 
 # 总结
 
@@ -221,7 +221,7 @@ Bone选择头部
 
 实时处理起来可能很卡，我的CPU都冒烟了，不敢开渲染视图
 
-![image.png](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/15lg8ey7e3.png)
+![image.png](https://arsrnasitehk-1257609559.file.myqcloud.com/blog-images/blender-Festivity-render/15lg8ey7e3.png_web)
 
 ---
 
