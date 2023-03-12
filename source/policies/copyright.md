@@ -6,7 +6,7 @@ keywords:
 description:
 photos: https://www.arsrna.cn/images/DSC08095_cop.jpg
 ---
-*版本：2022-9-9*
+*版本：2023-3-12*
 
 # 1.为什么要执行该协议？
 
@@ -19,7 +19,7 @@ photos: https://www.arsrna.cn/images/DSC08095_cop.jpg
 7. 在征得本网站，以及作者同意的情况下，本网站的作品允许非盈利性引用，并请注明出处：“作者：____转载自____”字样，以尊重作者的劳动成果。版权归原作/译者所有。未经允许，严禁转载。对非法转载者，本站和作者保留采用法律手段追究的权利。
 8. 本站之声明以及其修改权、更新权及最终解释权均属原站长所有
 9. 本站部分资源拥有著作权，下文查看具有著作权的作品，若您侵犯了本站特定作品作者的权益，本站站长将采取法律手段维护权益。
-10. 您若需要本站部分版权权益的，请联系站长 [https://www.arsrna.cn/communication/]([https://www.arsrna.cn/communication/](https://www.arsrna.cn/copyrights/)) 签订相关协议并按要求完成。
+10. 您若需要本站部分版权权益的，请联系站长 [点击进入](https://www.arsrna.cn/communication/) 签订相关协议并按要求完成。
 11. 以上声明的解释权归本站站长所有。
 
 # 2.本站什么作品受到什么保护？
@@ -30,25 +30,27 @@ photos: https://www.arsrna.cn/images/DSC08095_cop.jpg
 2. 本站源代码非开源代码，但也并未申请计算机软件著作权，即使如此，仍然受到著作权法的保护，您可以在法律允许范围内使用源代码，但是源代码出现的问题一律由您自己负责。
 3. 本站开源项目的代码按照对应开源协议进行，目前以GPL3.0为主，协议请到对应项目查看LICENSE
 4. 本站部分视频与图文资源愿意以共享的方式公开，遵守CC BY-NC-SA 4.0的协议，详细请看下文 **CC协议内容**
-5. 本站截止至本文版本起，共有 1 件作品登记了著作权。
-6. 本站截止至本文版本起，共有 1 份代码登记了软件著作权。
+5. 本站截止至本文版本起，共有 2 件作品登记了著作权。
+6. 本站截止至本文版本起，共有 4 份代码登记了软件著作权。
 
-## 2.2 本站已登记著作权的作品
+## 2.2 本站已登记并允许公示的著作权的作品
 
 ### 2.2.1 美术作品
 
-#### ArSrNa 高性能计算图标
-
-![ArSrNa高性能计算图标](https://www.arsrna.cn/elec/RILogo.jpg)
-登记号：鲁作登字-2022-F-00782000
+| 作品名               | 类型 | 登记号                           |
+| -------------------- | ---- | -------------------------------- |
+| ArSrNa高性能计算图标 | 美术 | 登记号：鲁作登字-2022-F-00782000 |
 
 ### 2.2.2 计算机软件
 
-#### Ar-Sr-Na Blender 单机渲染软件 V1.0
+查询地址：[https://register.ccopyright.com.cn/publicInquiry.html](https://register.ccopyright.com.cn/publicInquiry.htmlhttps://register.ccopyright.com.cn/publicInquiry.html)
 
-登记号：[2022SR1349176](https://register.ccopyright.com.cn/publicInquiry.html?type=softList&registerNumber=2022SR1349176&keyWord=Ar-Sr-Na%20Blender%20%E5%8D%95%E6%9C%BA%E6%B8%B2%E6%9F%93%E8%BD%AF%E4%BB%B6&publicityType=ALL&registerDateType=ALL)
-
-
+| 软件名称                            | 登记号        |
+| ----------------------------------- | ------------- |
+| Ar-Sr-Na Blender 单机渲染软件       | 2022SR1349176 |
+| Ar-Sr-Na AI插图在线超分辨率降噪平台 | 2023SR0315332 |
+| Ar-Sr-Na 图像批量增强软件           | 2023SR0315331 |
+| Ar-Sr-Na 视频画质增强软件           | 2023SR0315330 |
 
 ## 2.3 CC协议内容：
 
@@ -81,6 +83,8 @@ photos: https://www.arsrna.cn/images/DSC08095_cop.jpg
 第三十四条、图书出版者经作者许可，可以对作品修改、删节。报社、期刊社可以对作品作文字性修改、删节。对内容的修改，应当经作者许可。
 
 第三十五条、出版改编、翻译、注释、整理、汇编已有作品而产生的作品，应当取得改编、翻译、注释、整理、汇编作品的著作权人和原作品的著作权人许可，并支付报酬。
+
+---
 
 此致
 Ar-Sr-Na
