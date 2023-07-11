@@ -15,20 +15,21 @@ links:
       name: Ar-Sr-Na 主站
       desc: 突破计算边界，构筑数字视界
 
+    - url: https://os.arsrna.cn
+      img: https://www.arsrna.cn/elec/logo.ico
+      name: Ar-Sr-Na 资源与开源资源
+      desc: 字面意思
+
     - url: https://ysncir.cn
       img: https://www.arsrna.cn/elec/logo.png
       name: Ar-Sr-Na 电子
-      desc: We shape passion of every electron
-  
-    - url: https://l.arsrna.cn
-      img: https://www.arsrna.cn/elec/logo.ico
-      name: Ar-Sr-Na 学习中心
-      desc: 突破计算边界，构筑数字视界
+      desc: 无
+
 
 
   
-  - group: 来自博客站的互链
-    desc: 欢迎交换友链 ꉂ(ˊᗜˋ) <a href="https://wj.qq.com/s2/3677282/eb48/" target="_blank">点此申请</a>
+  - group: 互链
+    desc: 欢迎交换友链 <a href="https://wj.qq.com/s2/3677282/eb48/" target="_blank">点此</a>
     items:
     - url: https://tsukisou.ink/
       img: https://video.drblack-system.com/logo.jpg
@@ -44,7 +45,6 @@ links:
       img: 
       name: 丑八怪
       desc: 云原生技术小栈
-
 
     - url: https://ouyangqiqi.cn
       img: https://cdn.ouyangqiqi.cn/images/qiqi.jpg

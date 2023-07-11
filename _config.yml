@@ -4,9 +4,9 @@
 
 # Site
 title: Ar-Sr-Na 博客站
-subtitle: 全站Serverless
+subtitle: 字面意思
 description: 突破计算边界，构筑数字视界
-keywords: 科技,互联网,漫展,业余无线电,编程,HTML,php,Ar-Sr-Na,ArSrNa,云存储,互联网+解决方案,云计算,云计算是什么,高性能云计算,GPU服务器,CPU服务器,javascript,全栈开发,blender渲染,电子,PCB,SMT
+keywords: 科技,互联网,漫展,业余无线电,HTML,react,前端,Ar-Sr-Na,ArSrNa,云存储,互联网+解决方案,云计算,云计算是什么,高性能云计算,GPU服务器,CPU服务器,javascript,全栈开发,blender渲染,电子,PCB,SMT
 author: Ar-Sr-Na
 language: zh-CN
 timezone:
