@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Ar-Sr-Na 博客站
+title: Ar-Sr-Na | 前端技术
 subtitle: 字面意思
-description: 突破计算边界，构筑数字视界
+description: 前端技术
 keywords: 科技,互联网,漫展,业余无线电,HTML,react,前端,Ar-Sr-Na,ArSrNa,云存储,互联网+解决方案,云计算,云计算是什么,高性能云计算,GPU服务器,CPU服务器,javascript,全栈开发,blender渲染,电子,PCB,SMT
 author: Ar-Sr-Na
 language: zh-CN
@@ -13,7 +13,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://b.arsrna.cn
+url: https://www.arirs.cn
 root: /
 permalink: /posts/:title/
 permalink_defaults:
@@ -103,8 +103,8 @@ admin:
 metadata:
   avatar: https://res.arsrna.cn/icon2.jpg
   authorLink: www.arsrna.cn
-  authorAbout: 突破计算边界，构筑数字视界，www.arsrna.cn
-  authorDesc: 突破计算边界，构筑数字视界，www.arsrna.cn
+  authorAbout: 突破计算边界，构筑数字视界
+  authorDesc: 突破计算边界，构筑数字视界
   categories: 技术
   comments: true
   description: 
