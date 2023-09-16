@@ -588,7 +588,7 @@ post:
   # 在文章开头显示文章更新时间，该时间默认是 md 文件更新时间，可通过 front-matter 中 `updated` 手动指定（和 date 一样格式）
   # Update date is displayed at the beginning of the post. The default date is the update date of the md file, which can be manually specified by `updated` in front-matter (same format as date)
   updated:
-    enable: false
+    enable: true
 
     # 格式参照 ISO-8601 日期格式化
     # ISO-8601 date format
@@ -1003,7 +1003,7 @@ links:
       link: https://wj.qq.com/s2/3677282/eb48/,
       avatar: https://www.arsrna.cn/elec/logo.ico,
       title: 点此申请,
-      intro: 请按要求完成网站部署，周六更新
+      intro: 请按要求完成网站部署
     }
     - {
       link: https://www.arsrna.cn,
@@ -1013,37 +1013,10 @@ links:
     }
 
     - {
-      link: https://ysncir.cn,
-      avatar: https://www.arsrna.cn/elec/logo.png,
-      title: Ar-Sr-Na 电子,
-      intro: We shape passion of every electron
-    }
-
-    - {
-      link: https://l.arsrna.cn,
-      avatar: https://www.arsrna.cn/elec/logo.ico,
-      title: Ar-Sr-Na 学习中心,
-      intro: 突破计算边界，构筑数字视界
-    }
-
-    - {
       link: https://tsukisou.ink/,
       avatar: https://video.drblack-system.com/logo.jpg,
       title: DrBlackの自言自语,
       intro: 「その手を離すのでしょう 優しい笑みできっと」
-    }
-
-    - {
-      link: https://www.saroin.com,
-      avatar: https://www.saroin.com/%E9%B2%B8%E4%B8%80.jpg,
-      title: 鲸一,
-      intro: 希望是件美好的事，也许是世间最美好的东西，而美好的事物永不消逝!
-    }
-    - {
-      link: https://choubaguai.net/,
-      avatar: https://cravatar.cn/avatar/,
-      title: 丑八怪,
-      intro: 云原生技术小栈
     }
 
     - {
