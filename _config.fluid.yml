@@ -18,11 +18,11 @@
 
 # 用于浏览器标签的图标
 # Icon for browser tab
-favicon: https://www.arsrna.cn/elec/logo.ico
+favicon: https://res.arsrna.cn/logo.ico
 
 # 用于苹果设备的图标
 # Icon for Apple touch
-apple_touch_icon: https://www.arsrna.cn/elec/logo.ico
+apple_touch_icon: https://res.arsrna.cn/logo.ico
 
 # 浏览器标签页中的标题分隔符，效果： 文章名 - 站点名
 # Title separator in browser tab, eg: article - site
@@ -242,17 +242,17 @@ custom_css:
 # 网页访问统计
 # Analysis of website visitors
 web_analytics:  # 网页访问统计
-  enable: false
+  enable: true
 
   # 遵循访客浏览器"请勿追踪"的设置，如果开启则不统计其访问
   # Follow the "Do Not Track" setting of the visitor's browser
   # See: https://www.w3.org/TR/tracking-dnt/
-  follow_dnt: true
+  follow_dnt: false
 
   # 百度统计的 Key，值需要获取下方链接中 `hm.js?` 后边的字符串
   # Baidu analytics, get the string behind `hm.js?`
   # See: https://tongji.baidu.com/sc-web/10000033910/home/site/getjs?siteId=13751376
-  baidu:
+  baidu: ef899daf0c6d1ed5d4bc14ae9a03a99f
 
   # Google 统计的 Tracking ID
   # Google analytics, set Tracking ID
@@ -348,7 +348,7 @@ navbar:
   # Navigation bar menu. `key` is used to associate languages/*.yml. If there is no association, the value of `key` itself will be displayed; if `icon` is a css class, it can be omitted; adding `name` can force the display of the specified name
   menu:
     - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
-    # - { key: "回到主站", link: "https://www.arsrna.cn/", icon: "iconfont icon-home-fill" }
+    - { key: "回到主站", link: "https://www.arsrna.cn/", icon: "iconfont icon-home-fill" }
     - { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill" }
     # - { key: "协议", link: "https://www.arsrna.cn/policy/", icon: "iconfont icon-book" }
     - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
@@ -1001,13 +1001,13 @@ links:
   items:
     - {
       link: https://wj.qq.com/s2/3677282/eb48/,
-      avatar: https://www.arsrna.cn/elec/logo.ico,
+      avatar: https://res.arsrna.cn/logo.ico,
       title: 点此申请,
       intro: 请按要求完成网站部署
     }
     - {
       link: https://www.arsrna.cn,
-      avatar: https://www.arsrna.cn/elec/logo.ico,
+      avatar: https://res.arsrna.cn/logo.ico,
       title: Ar-Sr-Na 主站,
       intro: 突破计算边界，构筑数字视界
     }
