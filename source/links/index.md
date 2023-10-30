@@ -8,22 +8,17 @@ comments: true
 photos: https://res.arsrna.cn/%E5%B4%A9%E5%9D%8F3/20200928115009_18836.jpg_optimization.png_web
 links:
   - group: 本站其他站点
-    desc: 其他项目
+    desc: 其他
     items:
     - url: https://www.arsrna.cn
       img: https://www.arsrna.cn/elec/logo.ico
       name: Ar-Sr-Na 主站
-      desc: 突破计算边界，构筑数字视界
+      desc: 主站
 
     - url: https://os.arsrna.cn
       img: https://www.arsrna.cn/elec/logo.ico
       name: Ar-Sr-Na 资源与开源资源
       desc: 字面意思
-
-    - url: https://ysncir.cn
-      img: https://www.arsrna.cn/elec/logo.png
-      name: Ar-Sr-Na 电子
-      desc: 无
 
 
 
@@ -40,6 +35,11 @@ links:
       img: https://cdn.jsdelivr.net/gh/ArSrNa/CDN/linkv_img/cop/saroin.com.webp
       name: 鲸一
       desc: 希望是件美好的事，也许是世间最美好的东西，而美好的事物永不消逝!
+
+    - url: https://wxory.com/
+      img: https://st1-res.arsrna.cn/linkv_img/wxory.com.jpg
+      name: 我的网上邻居
+      desc: 自由追逐，勇敢而赤诚
 
     - url: https://choubaguai.net/
       img: 
