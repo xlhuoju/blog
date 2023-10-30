@@ -10,7 +10,7 @@ inputs:
   src:
     # src: ./build  # 部署项目的目录路径
     dist: ./public # build 完成后输出目录，如果配置 hook， 此参数必填
-    hook: npm run build # hook 脚本
+    hook: hexo g # hook 脚本
     index: index.html
     error: 404.html
     websitePath: ./

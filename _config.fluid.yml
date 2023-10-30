@@ -1026,6 +1026,13 @@ links:
       intro: 「大切な人と再会できる日を」
     }
 
+    - {
+      link: https://wxory.com/,
+      avatar: https://st1-res.arsrna.cn/linkv_img/wxory.com.jpg,
+      title: 我的网上邻居,
+      intro: 自由追逐，勇敢而赤诚
+    }
+
   # 当成员头像加载失败时，替换为指定图片
   # When the member avatar fails to load, replace the specified image
   onerror_avatar: /img/avatar.png
