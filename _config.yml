@@ -4,7 +4,7 @@
 
 # Site
 title: Ar-Sr-Na | 博客站
-subtitle: 字面意思
+subtitle: 就是放文章的地方
 description: 博客站
 keywords: 科技,互联网,漫展,业余无线电,HTML,react,前端,Ar-Sr-Na,ArSrNa,云存储,互联网+解决方案,云计算,云计算是什么,高性能云计算,GPU服务器,CPU服务器,javascript,全栈开发,blender渲染,电子,PCB,SMT
 author: Ar-Sr-Na
@@ -35,27 +35,27 @@ titlecase: false # Transform title into titlecase
 external_link:
   enable: true # Open external links in new tab
   field: site # Apply to the whole site
-  exclude: '' # Open external links in new tab
+  exclude: "" # Open external links in new tab
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
-highlight: 
+highlight:
   enable: false
   line_number: false
   auto_detect: false
   tab_replace:
-  
+
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ''
+  path: ""
   per_page: 10
   order_by: -date
-  
+
 # Category & Tag
 default_category: uncategorized
 category_map:
@@ -86,7 +86,7 @@ feed:
   hub:
   content: false
   content_limit: 140
-  content_limit_delim: ' '
+  content_limit_delim: " "
   order_by: -date
 
 sitemap:
@@ -107,12 +107,11 @@ metadata:
   authorDesc: 突破计算边界，构筑数字视界
   categories: 技术
   comments: true
-  description: 
-  photos: 
-
+  description:
+  photos:
 
 deploy:
-- type: git
-  repo: https://e.coding.net/arsrna/website-mainsite/blogFrontend.git
-- type: git
-  repo: https://github.com/ArSrNa/hexo.git
+  - type: git
+    repo: https://e.coding.net/arsrna/website-mainsite/blogFrontend.git
+  - type: git
+    repo: https://github.com/ArSrNa/hexo.git
