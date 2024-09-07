@@ -6,7 +6,7 @@ keywords:
 description:
 photos: https://www.arsrna.cn/images/DSC08095_cop.jpg
 ---
-版本 2022-7-7
+版本 2024-9-7
 
 # 1.隐私协议
 
@@ -18,9 +18,7 @@ photos: https://www.arsrna.cn/images/DSC08095_cop.jpg
 
 仅在本站域名和子域名内，该条文才会生效。
 
-本站站点域名为：arsrna.cn、arsrna.com、sr.js.cn
-
-其余属于本站的域名为：ysncir.cn、arirs.cn
+站点域名为：arsrna.cn、arsrna.com、arirs.cn及其子域。
 
 ## 1.2 我们收集何种及为何收集个人数据
 
@@ -84,13 +82,13 @@ photos: https://www.arsrna.cn/images/DSC08095_cop.jpg
 
 QQ:2459405337
 
-更多请前往 [https://www.arsrna.cn/communication/]([https://www.arsrna.cn/communication/](https://www.arsrna.cn/copyrights/)) 查看
+更多请前往 [https://www.arsrna.com/contact](https://www.arsrna.com/contact) 查看
 
 # 3.其他信息
 
 ## 3.1 我们如何保护您的数据
 
-本站前端由腾讯云对象存储提供托管，后端Serverless由腾讯云提供，网站证书由腾讯云提供，请参照腾讯云相关协议。
+本站前端由腾讯云对象存储提供托管，后端Serverless由阿里云提供，请参照腾讯云及阿里云相关协议。
 
 我们使用加密技术（例如，TLS、SSL）、匿名化处理等手段来保护您的个人信息。
 
@@ -100,11 +98,11 @@ QQ:2459405337
 
 ### 3.2.1 我们能看到的内容
 
-您的完整用户名、
-邮箱前两位和邮箱域名、
-手机号前三位和后一位、
-省级地区、
-唯一识别码（UserID）
+* 您的完整用户名
+* 邮箱前两位和邮箱域名
+* 手机号前三位和后一位
+* 省级地区
+* 唯一识别码（UniqueID）
 
 您在进行实名认证时产生的任何数据，本站均无权限查看，数据API由腾讯云天御提供，请参照相应的协议。
 
@@ -112,7 +110,7 @@ QQ:2459405337
 
 本站有权冻结，封禁，删除您的账户，可以重置密码
 
-这一切的前提，除非违反了相关法律或政策要求强制执行的，其余都需要征得您的同意
+这一切的前提，除非违反了相关法律或政策而要求强制执行的，其余操作均需要征得您的同意。
 
 ### 3.2.3 您的账户会被共享吗
 
@@ -121,4 +119,4 @@ QQ:2459405337
 本站头像来源为 cravatar.cn ，您的邮箱会被md5加密后传入 cravatar.cn 返回头像
 
 此致
-Ar-Sr-Na
+上海绫中信息技术有限公司

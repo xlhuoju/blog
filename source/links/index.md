@@ -51,4 +51,9 @@ links:
       name: 欧阳淇淇の小屋
       desc: 「大切な人と再会できる日を」
 
+    - url: https://hvril.cn/
+      img: https://cdn.ouyangqiqi.cn/images/hvril.cn.jpg
+      name: 烨然Hvril
+      desc: 屏蔽力+钝感力==人生无敌
+
 ---
