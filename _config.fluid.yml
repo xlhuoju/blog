@@ -1040,6 +1040,13 @@ links:
       intro: 屏蔽力+钝感力==人生无敌
     }
 
+    - {
+      link: https://miruko.fun/,
+      avatar: https://st1-res.arsrna.cn/linkv_img/miruko.fun.jpg,
+      title: 光魔法の研究部,
+      intro: 记录生活
+    }
+
   # 当成员头像加载失败时，替换为指定图片
   # When the member avatar fails to load, replace the specified image
   onerror_avatar: /img/avatar.png
