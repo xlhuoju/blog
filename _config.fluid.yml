@@ -1043,8 +1043,8 @@ links:
     - {
       link: https://miruko.fun/,
       avatar: https://st1-res.arsrna.cn/linkv_img/miruko.fun.jpg,
-      title: 光魔法の研究部,
-      intro: 记录生活
+      title: 蕾,
+      intro: 光魔法の研究部
     }
 
   # 当成员头像加载失败时，替换为指定图片
